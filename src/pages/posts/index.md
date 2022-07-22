@@ -2,11 +2,11 @@
 setup: |
   import Layout from '../../layouts/BlogPost.astro'
   import Cool from '../../components/Author.astro'
-title: Hello world!
+title: Hello Astro!
 publishDate: 12 Sep 2021
 name: Nate Moore
 value: 128
-description: Just a Hello World Post!
+description: Just a Hello Astro Post!
 ---
 
 <Cool name={frontmatter.name} href="https://twitter.com/n_moore" client:load />
