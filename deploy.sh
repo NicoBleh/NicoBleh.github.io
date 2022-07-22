@@ -18,9 +18,10 @@ echo 'www.yaits.de' > CNAME
 git init
 git add -A
 git commit -m 'deploy'
+git branch -m main
 
 # if you are deploying to https://<USERNAME>.github.io
-git push -f git@github.com:NicoBleh/NicoBleh.github.io.git deploy
+git push -f git@github.com:NicoBleh/NicoBleh.github.io.git gh-pages
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:<USERNAME>/<REPO>.git main:gh-pages
