@@ -101,8 +101,8 @@ packages:
   /@astrojs/svelte-language-integration@0.1.4(typescript@4.6.4):
     resolution: {integrity: sha512-rgi3g078uAxdb8jg1A5U8sNWMUQq7UXwHT7qmPiGOeB+h5p+tzUFy/Awq2suv99Tq8efpn3HrAGTuDvxyvbwfg==}
     dependencies:
-      svelte: 3.48.0
-      svelte2tsx: 0.5.9(svelte@3.48.0)(typescript@4.6.4)
+      svelte: 3.59.2
+      svelte2tsx: 0.5.9(svelte@3.59.2)(typescript@4.6.4)
     transitivePeerDependencies:
       - typescript
     dev: true
@@ -5288,7 +5288,7 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /svelte2tsx@0.5.9(svelte@3.48.0)(typescript@4.6.4):
+  /svelte2tsx@0.5.9(svelte@3.59.2)(typescript@4.6.4):
     resolution: {integrity: sha512-xTDASjlh+rKo4QRhTRYSH87sS7fRoyX67xhGIMPKa3FYqftRHRmMes6nVgEskiuhBovslNHYYpMMg5YM5n/STg==}
     peerDependencies:
       svelte: ^3.24
@@ -5296,12 +5296,12 @@ packages:
     dependencies:
       dedent-js: 1.0.1
       pascal-case: 3.1.2
-      svelte: 3.48.0
+      svelte: 3.59.2
       typescript: 4.6.4
     dev: true
 
-  /svelte@3.48.0:
-    resolution: {integrity: sha512-fN2YRm/bGumvjUpu6yI3BpvZnpIm9I6A7HR4oUNYd7ggYyIwSA/BX7DJ+UXXffLp6XNcUijyLvttbPVCYa/3xQ==}
+  /svelte@3.59.2:
+    resolution: {integrity: sha512-vzSyuGr3eEoAtT/A6bmajosJZIUWySzY2CzB3w2pgPvnkUjGqlDnsNnA0PMO+mMAhuyMul6C2uuZzY6ELSkzyA==}
     engines: {node: '>= 8'}
     dev: true
 
