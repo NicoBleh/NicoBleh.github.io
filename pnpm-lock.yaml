@@ -837,7 +837,7 @@ packages:
       strip-ansi: 7.0.1
       supports-esm: 1.0.0
       tsconfig-resolver: 3.0.1
-      vite: 2.9.8
+      vite: 2.9.17
       yargs-parser: 21.0.1
       zod: 3.15.1
     transitivePeerDependencies:
@@ -4650,7 +4650,7 @@ packages:
     dev: true
 
   /resolve@1.1.7:
-    resolution: {integrity: sha1-IDEU2CrSxe2ejgQRs5ModeiJ6Xs=}
+    resolution: {integrity: sha512-9znBF0vBcaSN3W2j7wKvdERPwqTxSpCq+if5C0WoTCyV9n24rua28jeuQ2pL/HOf+yUe/Mef+H/5p60K0Id3bg==}
     dev: true
 
   /resolve@1.22.0:
@@ -5641,8 +5641,8 @@ packages:
       vfile-message: 3.1.2
     dev: true
 
-  /vite@2.9.8:
-    resolution: {integrity: sha512-zsBGwn5UT3YS0NLSJ7hnR54+vUKfgzMUh/Z9CxF1YKEBVIe213+63jrFLmZphgGI5zXwQCSmqIdbPuE8NJywPw==}
+  /vite@2.9.17:
+    resolution: {integrity: sha512-XxcRzra6d7xrKXH66jZUgb+srThoPu+TLJc06GifUyKq9JmjHkc1Numc8ra0h56rju2jfVWw3B3fs5l3OFMvUw==}
     engines: {node: '>=12.2.0'}
     hasBin: true
     peerDependencies:
