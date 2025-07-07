@@ -16,6 +16,8 @@
     --text-base--line-height: calc(1.5 / 1);
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
     --text-5xl: 3rem;
@@ -227,6 +229,9 @@
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
+  .h-64 {
+    height: calc(var(--spacing) * 64);
+  }
   .h-full {
     height: 100%;
   }
@@ -425,6 +430,10 @@
   .text-left {
     text-align: left;
   }
+  .text-3xl {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
   .text-4xl {
     font-size: var(--text-4xl);
     line-height: var(--tw-leading, var(--text-4xl--line-height));
@@ -519,6 +528,11 @@
       margin-top: calc(var(--spacing) * 8);
     }
   }
+  .\@\[480px\]\:aspect-video {
+    @container (width >= 480px) {
+      aspect-ratio: var(--aspect-video);
+    }
+  }
   .\@\[480px\]\:h-12 {
     @container (width >= 480px) {
       height: calc(var(--spacing) * 12);
@@ -529,9 +543,24 @@
       height: auto;
     }
   }
+  .\@\[480px\]\:min-h-screen {
+    @container (width >= 480px) {
+      min-height: 100vh;
+    }
+  }
+  .\@\[480px\]\:min-w-60 {
+    @container (width >= 480px) {
+      min-width: calc(var(--spacing) * 60);
+    }
+  }
   .\@\[480px\]\:min-w-\[400px\] {
     @container (width >= 480px) {
       min-width: 400px;
+    }
+  }
+  .\@\[480px\]\:flex-1 {
+    @container (width >= 480px) {
+      flex: 1;
     }
   }
   .\@\[480px\]\:flex-row {
@@ -557,6 +586,11 @@
   .\@\[480px\]\:px-10 {
     @container (width >= 480px) {
       padding-inline: calc(var(--spacing) * 10);
+    }
+  }
+  .\@\[480px\]\:px-40 {
+    @container (width >= 480px) {
+      padding-inline: calc(var(--spacing) * 40);
     }
   }
   .\@\[480px\]\:py-20 {
@@ -643,6 +677,12 @@
   .\@\[864px\]\:justify-center {
     @container (width >= 864px) {
       justify-content: center;
+    }
+  }
+  .\@\[864px\]\:text-5xl {
+    @container (width >= 864px) {
+      font-size: var(--text-5xl);
+      line-height: var(--tw-leading, var(--text-5xl--line-height));
     }
   }
 }

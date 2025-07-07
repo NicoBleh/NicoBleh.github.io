@@ -15,25 +15,25 @@
 </head>
 
 <body>
-	<div class="relative flex size-full min-h-screen flex-col bg-slate-50 group/design-root overflow-x-hidden"
+	<div class="relative flex size-full @[480px]:min-h-screen flex-col bg-slate-50 group/design-root overflow-x-hidden"
 		style='font-family: Inter, "Noto Sans", sans-serif;'>
 		<div class="layout-container flex h-full grow flex-col">
 			{% include nav.html %}
-			<div class="px-40 flex flex-1 justify-center py-5">
-				<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+			<div class="px-4 @[480px]:px-40 flex flex-1 justify-center py-5">
+				<div class="layout-content-container flex flex-col w-full max-w-[960px] flex-1">
 					<div class="@container">
-						<div class="flex flex-col gap-6 px-4 py-10 @[480px]:gap-8 @[864px]:flex-row">
+						<div class="flex w-full flex-col gap-6 px-4 py-10 @[480px]:gap-8 @[864px]:flex-row">
 							<div
-								class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg @[480px]:h-auto @[480px]:min-w-[400px] @[864px]:w-full"
+								class="w-full bg-center bg-no-repeat bg-cover rounded-lg h-64 @[480px]:aspect-video @[480px]:h-auto @[480px]:min-w-[400px] @[864px]:w-full"
 								style='background-image: url("nico_hero.jpg");'></div>
 							<div class="flex flex-col gap-6 @[480px]:min-w-[400px] @[480px]:gap-8 @[864px]:justify-center">
 								<div class="flex flex-col gap-2 text-left">
 									<h1
-										class="text-[#0d141b] text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
+										class="text-[#0d141b] text-3xl @[480px]:text-4xl @[864px]:text-5xl font-black leading-tight tracking-[-0.033em]">
 										Expert Tech Leadership for High-Growth Startups &amp; Scaleups
 									</h1>
 									<h2
-										class="text-[#0d141b] text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+										class="text-[#0d141b] text-base @[480px]:text-lg font-normal leading-normal">
 										As an experienced interim CTO and technology strategist, I guide ambitious companies through
 										critical tech transitions, scale their product and engineering teams effectively, and drive
 										sustainable growth with innovative solutions.
