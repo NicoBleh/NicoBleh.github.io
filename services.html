@@ -1,0 +1,75 @@
+---
+lang: en
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="./styles/fonts.css" />
+
+	<title>Nico Bleh Consulting</title>
+	<link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+	<link href="./styles/output.css" rel="stylesheet">
+
+	<meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+	<div class="relative flex size-full @[480px]:min-h-screen flex-col bg-slate-50 group/design-root overflow-x-hidden"
+		style='font-family: Inter, "Noto Sans", sans-serif;'>
+		<div class="layout-container flex h-full grow flex-col">
+
+			{% include nav.html %}
+
+			<div class="px-4 @[480px]:px-40 flex flex-1 justify-center py-5">
+				<div class="layout-content-container flex flex-col w-full max-w-[960px] flex-1">
+					<div class="@container">
+						<div class="flex w-full flex-col gap-6 px-4 py-10 @[480px]:gap-8 @[864px]:flex-row">
+							<div class="w-full bg-center bg-no-repeat bg-cover rounded-lg h-64 @[480px]:aspect-video @[480px]:h-auto @[480px]:min-w-[400px] @[864px]:w-full"
+								style='background-image: url("nico_hero.jpg");'></div>
+							<div
+								class="flex flex-col gap-6 @[480px]:min-w-[400px] @[480px]:gap-8 @[864px]:justify-center">
+								<div class="flex flex-col gap-2 text-left">
+									<h1 class="mb-16 text-[#0d141b] text-3xl @[480px]:text-4xl @[864px]:text-5xl font-black leading-tight tracking-[-0.033em]">
+										What I Offer
+									</h1>
+									<h2 class="text-[#0d141b] text-base @[480px]:text-lg font-normal leading-normal">
+										With over 15 years of experience guiding startups and scaleups, I combine strategic vision and hands-on expertise to architect scalable SaaS platforms, optimize engineering processes, and integrate cutting-edge technologies—from cloud infrastructure and microservices to generative AI and automation. My goal is to accelerate your product roadmap, empower your teams, and drive measurable business value with innovative, reliable solutions.
+									</h2>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Services Section -->
+					<section class="px-4 py-10">
+						<h2 class="text-[#0d141b] text-[28px] @[480px]:text-4xl font-bold leading-tight tracking-[-0.015em]">What I Offer</h2>
+						<ul class="list-disc list-outside pl-6 text-[#4c719a] text-base @[480px]:text-lg mt-4 space-y-4">
+							<li><strong>Interim CTO / Fractional CTO:</strong> Provide strategic technology leadership to guide your startup or scaleup through critical growth phases, including architecture design, team scaling, and investor due diligence.</li>
+							<li><strong>Technology Consulting & Architecture:</strong> Help select and implement the best tech stack, optimize infrastructure for scalability and reliability, and design modular, maintainable architectures.</li>
+							<li><strong>Agile Transformation & Process Optimization:</strong> Implement Scrum, OKRs, and CI/CD best practices, streamline development workflows, and foster a high-performing engineering culture.</li>
+							<li><strong>Generative AI & Chatbot Development:</strong> Build advanced AI-driven chatbots and dynamic text generation solutions to enhance customer engagement and automate workflows.</li>
+						</ul>
+					</section>
+
+					<!-- Why Choose Me Section -->
+					<section class="px-4 py-10 bg-white">
+						<h2 class="text-[#0d141b] text-[28px] @[480px]:text-4xl font-bold leading-tight tracking-[-0.015em]">Why Choose Me</h2>
+						<ul class="list-disc list-outside pl-6 text-[#4c719a] text-base @[480px]:text-lg mt-4 space-y-2">
+							<li><strong>Proven CTO Experience:</strong> Multiple successful CTO roles, combining coding expertise with strategic vision and stakeholder management.</li>
+							<li><strong>SaaS & Business Insight:</strong> Deep understanding of building and scaling SaaS products, aligned with business objectives and investor readiness.</li>
+							<li><strong>Comprehensive Tech Stack:</strong> Expertise across front-end, back-end, cloud infrastructures, and DevOps, leading teams of various sizes.</li>
+							<li><strong>Agile & Process Excellence:</strong> Skilled in implementing Scrum, OKRs, and CI/CD to boost productivity and delivery quality.</li>
+						</ul>
+					</section>
+
+					{% include cta.html %}
+				</div>
+			</div>
+			{% include footer.html %}
+		</div>
+	</div>
+</body>
+
+</html>
