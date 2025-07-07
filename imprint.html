@@ -1,0 +1,48 @@
+---
+lang: en
+---
+
+{% assign t = site.data.translations[page.lang] %}
+
+<!DOCTYPE html>
+<html lang="{{ page.lang }}">
+<head>
+  <meta charset="utf-8">
+  <title>{{ t.nav_impressum }} | Nico Bleh</title>
+
+    <link rel="stylesheet" href="./styles/fonts.css" />
+
+	<link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+	<link href="./styles/output.css" rel="stylesheet">
+
+	<meta name="viewport" content="width=device-width">
+
+</head>
+<body>
+  {% include nav.html %}
+
+  <main class="px-4 py-10 max-w-[960px] mx-auto prose">
+    <h1 class="text-3xl font-bold mb-6">{{ t.nav_impressum }}</h1>
+    <section>
+      <p><strong>Responsible under applicable law:</strong></p>
+      <p>Nico Bleh</p>
+      <p>Westhofener Str. 7</p>
+      <p>67596 Dittelsheim-Heßloch</p>
+      <p>Germany</p>
+    </section>
+
+    <section class="mt-8">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:nico@nicobleh.com">nico@nicobleh.com</a></p>
+      <p>Phone: +49 176 42048043</p>
+    </section>
+
+    <section class="mt-8" style="display: none";>
+      <h2>VAT Identification Number</h2>
+      <p>If applicable: DE123456789</p>
+    </section>
+  </main>
+
+  {% include footer.html %}
+</body>
+</html>

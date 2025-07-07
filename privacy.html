@@ -1,0 +1,69 @@
+---
+lang: en
+---
+{% assign t = site.data.translations[page.lang] %}
+
+<!DOCTYPE html>
+<html lang="{{ page.lang }}">
+
+<head>
+    <meta charset="utf-8">
+    <title>Datenschutzerklärung | Nico Bleh</title>
+
+    <link rel="stylesheet" href="./styles/fonts.css" />
+
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+    <link href="./styles/output.css" rel="stylesheet">
+
+    <meta name="viewport" content="width=device-width">
+
+
+</head>
+
+<body>
+    {% include nav.html %}
+
+    <main class="px-4 py-10 max-w-[960px] mx-auto">
+        <h1 class="text-3xl font-bold mb-6">{{ t.privacy_title }}</h1>
+
+        <p>
+            {{ t.privacy_intro }}
+        </p>
+
+        <h2 class="text-xl font-semibold mt-8 mb-4">{{ t.privacy_section1_title }}</h2>
+        <p>{{ t.privacy_section1_text | newline_to_br }}</p>
+
+        <h2 class="text-xl font-semibold mt-8 mb-4">{{ t.privacy_section2_title }}</h2>
+        <h3 class="font-medium mt-4">{{ t.privacy_section2a_title }}</h3>
+        <p>{{ t.privacy_section2a_text }}</p>
+        <ul class="list-disc list-inside ml-6 mt-2">
+          {% for item in t.privacy_section2a_list %}
+            <li>{{ item }}</li>
+          {% endfor %}
+        </ul>
+        <p>{{ t.privacy_section2a_text2 }}</p>
+
+        <h3 class="font-medium mt-6">{{ t.privacy_section2b_title }}</h3>
+        <p>{{ t.privacy_section2b_text }}</p>
+
+        <h2 class="text-xl font-semibold mt-8 mb-4">{{ t.privacy_section3_title }}</h2>
+        <p>{{ t.privacy_section3_text }}</p>
+
+        <h2 class="text-xl font-semibold mt-8 mb-4">{{ t.privacy_section4_title }}</h2>
+        <p>{{ t.privacy_section4_text }}</p>
+
+        <h2 class="text-xl font-semibold mt-8 mb-4">{{ t.privacy_section5_title }}</h2>
+        <p>{{ t.privacy_section5_text1 }}</p>
+        <p>{{ t.privacy_section5_text2 }}</p>
+
+        <h2 class="text-xl font-semibold mt-8 mb-4">{{ t.privacy_section6_title }}</h2>
+        <p>{{ t.privacy_section6_text }}</p>
+
+        <h2 class="text-xl font-semibold mt-8 mb-4">{{ t.privacy_section7_title }}</h2>
+        <p>{{ t.privacy_section7_text }}</p>
+    </main>
+
+    {% include footer.html %}
+</body>
+
+</html>
