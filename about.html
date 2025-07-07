@@ -1,0 +1,112 @@
+---
+---
+
+<html>
+
+<head>
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+	<link rel="stylesheet" as="style" onload="this.rel='stylesheet'"
+		href="https://fonts.googleapis.com/css2?display=swap&amp;family=Inter%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900" />
+
+	<title>Nico Bleh Consulting</title>
+	<link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+	<link href="./styles/output.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="relative flex size-full min-h-screen flex-col bg-slate-50 group/design-root overflow-x-hidden"
+		style='font-family: Inter, "Noto Sans", sans-serif;'>
+		<div class="layout-container flex h-full grow flex-col">
+
+			{% include nav.html %}
+
+			<div class="px-40 flex flex-1 justify-center py-5">
+				<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+					<div class="@container">
+						<div class="flex flex-col gap-6 px-4 py-10 @[480px]:gap-8 @[864px]:flex-row">
+							<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg @[480px]:h-auto @[480px]:min-w-[400px] @[864px]:w-full"
+								style='background-image: url("nico_hero.jpg");'></div>
+							<div
+								class="flex flex-col gap-6 @[480px]:min-w-[400px] @[480px]:gap-8 @[864px]:justify-center">
+								<div class="flex flex-col gap-2 text-left">
+									<h1
+										class="mb-16 text-[#0d141b] text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
+										About Nico Bleh
+									</h1>
+									<h2
+										class="text-[#0d141b] text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+										With over 15 years of leadership experience in high-impact tech roles, Nico Bleh
+										has guided startups and scaleups to achieve ambitious technical and business
+										objectives—from defining strategic technology roadmaps and architecting scalable
+										SaaS platforms to leading agile transformations and integrating generative AI
+										and chatbot solutions. His collaborative approach blends strategic vision with
+										hands-on execution, enabling teams to streamline processes, innovate rapidly,
+										and drive sustainable growth.
+									</h2>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- Professional Journey Section -->
+					<section class="px-4 py-16 @[480px]:px-10 @[480px]:py-20 bg-white">
+						<h2
+							class="text-[#0d141b] text-[28px] @[480px]:text-4xl font-bold leading-tight tracking-[-0.015em]">
+							Professional Journey</h2>
+						<ul class="list-none pl-0 mt-6 @[480px]:mt-8 space-y-4">
+							<li class="flex items-start gap-4">
+								<span class="font-bold w-28 shrink-0">2024–2025:</span>
+								<span class="flex-1 text-[#4c719a] text-base @[480px]:text-lg">Chief Technology Officer
+									at Opteinics – Defined and executed strategic technology roadmaps driving platform
+									growth.</span>
+							</li>
+							<li class="flex items-start gap-4">
+								<span class="font-bold w-28 shrink-0">2023-2024:</span>
+								<span class="flex-1 text-[#4c719a] text-base @[480px]:text-lg">Head of Technology at
+									Textbroker – Led infrastructure modernization and product architecture
+									redesign.</span>
+							</li>
+							<li class="flex items-start gap-4">
+								<span class="font-bold w-28 shrink-0">2022–2023:</span>
+								<span class="flex-1 text-[#4c719a] text-base @[480px]:text-lg">Department Head Web at
+									onOffice – Managed a team of 22 delivering unified web solutions.</span>
+							</li>
+							<li class="flex items-start gap-4">
+								<span class="font-bold w-28 shrink-0">2020–2021:</span>
+								<span class="flex-1 text-[#4c719a] text-base @[480px]:text-lg">CTO at Branchbob –
+									Oversaw merchant dashboard development and SaaS roadmap delivery.</span>
+							</li>
+							<li class="flex items-start gap-4">
+								<span class="font-bold w-28 shrink-0">2016–2020:</span>
+								<span class="flex-1 text-[#4c719a] text-base @[480px]:text-lg">CTO/Head of IT at
+									Creditshelf – Scaled technical teams and led technology through IPO.</span>
+							</li>
+						</ul>
+					</section>
+
+					<!-- My Approach Section -->
+					<section class="px-4 py-10">
+						<h2
+							class="text-[#0d141b] text-[28px] @[480px]:text-4xl font-bold leading-tight tracking-[-0.015em]">
+							My Approach</h2>
+						<p class="text-[#4c719a] text-base @[480px]:text-lg mt-4 leading-relaxed">
+							I partner closely with leadership to understand both business objectives and technical
+							challenges. My collaborative process involves rapid discovery, iterative development, and
+							transparent communication to ensure alignment and deliver measurable outcomes.
+						</p>
+						<p class="text-[#4c719a] text-base @[480px]:text-lg mt-2 leading-relaxed">
+							Whether you need to scale your engineering team, optimize existing systems, or embark on a
+							new product initiative, my goal is to provide pragmatic solutions that drive efficiency,
+							innovation, and sustainable growth.
+						</p>
+					</section>
+					{% include areas_of_expertise.html %}
+					{% include selected_projects.html %}
+					{% include cta.html %}
+				</div>
+			</div>
+			{% include footer.html %}
+		</div>
+	</div>
+</body>
+
+</html>
