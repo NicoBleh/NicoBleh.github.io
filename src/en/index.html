@@ -1,6 +1,7 @@
 ---
-lang: de
+lang: en
 ---
+
 {% assign t = site.data.translations[page.lang] %}
 
 <!DOCTYPE html>
@@ -20,50 +21,33 @@ lang: de
 	<div class="relative flex size-full @[480px]:min-h-screen flex-col bg-slate-50 group/design-root overflow-x-hidden"
 		style='font-family: Inter, "Noto Sans", sans-serif;'>
 		<div class="layout-container flex h-full grow flex-col">
-
 			{% include nav.html %}
-
 			<div class="px-4 @[480px]:px-40 flex flex-1 justify-center py-5">
 				<div class="layout-content-container flex flex-col w-full max-w-[960px] flex-1">
 					<div class="@container">
 						<div class="flex w-full flex-col gap-6 px-4 py-10 @[480px]:gap-8 @[864px]:flex-row">
 							{% include hero.html %}
-							<div
-								class="flex flex-col gap-6 @[480px]:min-w-[400px] @[480px]:gap-8 @[864px]:justify-center">
+							<div class="flex flex-col gap-6 @[480px]:min-w-[400px] @[480px]:gap-8 @[864px]:justify-center">
 								<div class="flex flex-col gap-2 text-left">
-									<h1 class="mb-16 text-[#0d141b] text-3xl @[480px]:text-4xl @[864px]:text-5xl font-black leading-tight tracking-[-0.033em]">
-										{{ t.services_header }}
+									<h1 class="text-[#0d141b] text-3xl @[480px]:text-4xl @[864px]:text-5xl font-black leading-tight tracking-[-0.033em]">
+										{{ t.hero_title }}
 									</h1>
 									<h2 class="text-[#0d141b] text-base @[480px]:text-lg font-normal leading-normal">
-										{{ t.services_intro }}
+										{{ t.hero_subtitle }}
 									</h2>
 								</div>
+								<a href="https://forms.gle/x745HeiKKSRCv5tH7" target="_blank" rel="noopener">
+									<button
+										class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#137beb] text-slate-50 text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]">
+										<span class="truncate">{{ t.hero_button_label }}</span>
+									</button>
+								</a>
 							</div>
 						</div>
 					</div>
-
-					<!-- Services Section -->
-					<section class="px-4 py-10">
-						<h2 class="text-[#0d141b] text-[28px] @[480px]:text-4xl font-bold leading-tight tracking-[-0.015em]">{{ t.services_header }}</h2>
-						<ul class="list-disc list-outside pl-6 text-[#4c719a] text-base @[480px]:text-lg mt-4 space-y-4">
-							<li>{{ t.services_list1 }}</li>
-							<li>{{ t.services_list2 }}</li>
-							<li>{{ t.services_list3 }}</li>
-							<li>{{ t.services_list4 }}</li>
-						</ul>
-					</section>
-
-					<!-- Why Choose Me Section -->
-					<section class="px-4 py-10 bg-white">
-						<h2 class="text-[#0d141b] text-[28px] @[480px]:text-4xl font-bold leading-tight tracking-[-0.015em]">{{ t.why_title }}</h2>
-						<ul class="list-disc list-outside pl-6 text-[#4c719a] text-base @[480px]:text-lg mt-4 space-y-2">
-							<li>{{ t.why_list1 }}</li>
-							<li>{{ t.why_list2 }}</li>
-							<li>{{ t.why_list3 }}</li>
-							<li>{{ t.why_list4 }}</li>
-						</ul>
-					</section>
-
+					{% include areas_of_expertise.html %}
+					{% include selected_projects.html %}
+					{% include testimonials.html %}
 					{% include cta.html %}
 				</div>
 			</div>

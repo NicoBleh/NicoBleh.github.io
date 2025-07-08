@@ -217,6 +217,9 @@
   .ml-6 {
     margin-left: calc(var(--spacing) * 6);
   }
+  .contents {
+    display: contents;
+  }
   .flex {
     display: flex;
   }
@@ -351,6 +354,13 @@
   }
   .gap-9 {
     gap: calc(var(--spacing) * 9);
+  }
+  .space-y-1 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 1) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 1) * calc(1 - var(--tw-space-y-reverse)));
+    }
   }
   .space-y-2 {
     :where(& > :not(:last-child)) {
@@ -539,6 +549,9 @@
   .tracking-\[0\.015em\] {
     --tw-tracking: 0.015em;
     letter-spacing: 0.015em;
+  }
+  .break-words {
+    overflow-wrap: break-word;
   }
   .whitespace-nowrap {
     white-space: nowrap;

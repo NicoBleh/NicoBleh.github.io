@@ -1,9 +1,10 @@
+{% assign t = site.data.translations[page.lang] %}
 <footer class="flex justify-center">
     <div class="flex max-w-[960px] flex-1 flex-col">
         <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
             <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
-                <a class="text-[#4c719a] text-base font-normal leading-normal min-w-40" href="privacy">Privacy Policy</a>
-                <a class="text-[#4c719a] text-base font-normal leading-normal min-w-40" href="imprint">Imprint</a>
+                  <a href="privacy" class="text-[#4c719a] text-base font-normal leading-normal min-w-40">{{ t.nav_privacy }}</a>
+                  <a href="imprint" class="text-[#4c719a] text-base font-normal leading-normal min-w-40">{{ t.nav_impressum }}</a>
             </div>
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="https://www.linkedin.com/in/nico-bleh/">
@@ -27,7 +28,7 @@
                     </div>
                 </a>
             </div>
-            <p class="text-[#4c719a] text-base font-normal leading-normal">@2025 Nico Bleh. All rights reserved.</p>
+            <p class="text-[#4c719a] text-base font-normal leading-normal">{{ t.footer_copyright }}</p>
         </footer>
     </div>
 </footer>

@@ -1,6 +1,7 @@
+{% assign t = site.data.translations[page.lang] %}
 <h2 class="text-[#0d141b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
-    Areas of
-    Expertise</h2>
+  {{ t.areas_title }}
+</h2>
 <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
     <div class="flex flex-1 gap-3 rounded-lg border border-[#cfdbe7] bg-slate-50 p-4 items-center">
         <div class="text-[#0d141b]" data-icon="Gear" data-size="24px" data-weight="regular">
@@ -11,7 +12,7 @@
                 </path>
             </svg>
         </div>
-        <h2 class="text-[#0d141b] text-base font-bold leading-tight">Technology Strategy</h2>
+        <h2 class="text-[#0d141b] text-base font-bold leading-tight">{{ t.expertise_technology_strategy }}</h2>
     </div>
     <div class="flex flex-1 gap-3 rounded-lg border border-[#cfdbe7] bg-slate-50 p-4 items-center">
         <div class="text-[#0d141b]" data-icon="PresentationChart" data-size="24px" data-weight="regular">
@@ -22,7 +23,7 @@
                 </path>
             </svg>
         </div>
-        <h2 class="text-[#0d141b] text-base font-bold leading-tight">Product Development</h2>
+        <h2 class="text-[#0d141b] text-base font-bold leading-tight">{{ t.expertise_product_development }}</h2>
     </div>
     <div class="flex flex-1 gap-3 rounded-lg border border-[#cfdbe7] bg-slate-50 p-4 items-center">
         <div class="text-[#0d141b]" data-icon="Users" data-size="24px" data-weight="regular">
@@ -33,7 +34,7 @@
                 </path>
             </svg>
         </div>
-        <h2 class="text-[#0d141b] text-base font-bold leading-tight">Team Leadership</h2>
+        <h2 class="text-[#0d141b] text-base font-bold leading-tight">{{ t.expertise_team_leadership }}</h2>
     </div>
     <div class="flex flex-1 gap-3 rounded-lg border border-[#cfdbe7] bg-slate-50 p-4 items-center">
         <div class="text-[#0d141b]" data-icon="Code" data-size="24px" data-weight="regular">
@@ -44,7 +45,7 @@
                 </path>
             </svg>
         </div>
-        <h2 class="text-[#0d141b] text-base font-bold leading-tight">Software Architecture</h2>
+        <h2 class="text-[#0d141b] text-base font-bold leading-tight">{{ t.expertise_software_architecture }}</h2>
     </div>
     <div class="flex flex-1 gap-3 rounded-lg border border-[#cfdbe7] bg-slate-50 p-4 items-center">
         <div class="text-[#0d141b]" data-icon="Sparkle" data-size="24px" data-weight="regular">
@@ -55,8 +56,7 @@
             </svg>
         </div>
         <div>
-            <h2 class="text-[#0d141b] text-base font-bold leading-tight">Generative AI &amp;
-                Chatbots</h2>
+            <h2 class="text-[#0d141b] text-base font-bold leading-tight">{{ t.expertise_generative_ai }}</h2>
         </div>
     </div>
 </div>

@@ -1,16 +1,18 @@
+{% assign t = site.data.translations[page.lang] %}
 <div class="@container">
     <div class="flex flex-col justify-end gap-6 px-4 py-10 @[480px]:gap-8 @[480px]:px-10 @[480px]:py-20">
         <div class="flex flex-col gap-2 text-center">
             <h1
                 class="text-[#0d141b] tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px] justify-center mx-auto">
-                Ready to Elevate Your Tech Strategy?</h1>
+                {{ t.cta_title }}
+            </h1>
         </div>
         <div class="flex flex-1 justify-center">
             <div class="flex justify-center">
                 <a href="https://forms.gle/x745HeiKKSRCv5tH7" target="_blank" rel="noopener">
                     <button
                         class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#137beb] text-slate-50 text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] grow">
-                        <span class="truncate">Book Your Free Strategy Call</span>
+                        <span class="truncate">{{ t.cta_button_label }}</span>
                     </button>
                 </a>
             </div>
