@@ -32,3 +32,67 @@
         </footer>
     </div>
 </footer>
+
+<!-- Klaro Cookie Banner -->
+<link
+  rel="stylesheet"
+  href="/styles/klaro.min.css"
+/>
+<script>
+  // Konfiguration für Klaro
+  window.klaroConfig = {
+    translations: {
+      de: {
+        privacyPolicyUrl: '/privacy',
+        consentModal: {
+          title: 'Dienste-Einstellungen',
+          description: 'Welche Dienste möchten Sie zulassen?'
+        },
+        purposes: {
+          analytics: 'Analytics'
+        },
+        ok: 'Alle akzeptieren',
+        cancel: 'Nur essenzielle Dienste akzeptieren'
+      },
+      en: {
+        privacyPolicyUrl: '/en/privacy',
+        consentModal: {
+          title: 'Service Settings',
+          description: 'Which services would you like to allow?'
+        },
+        purposes: {
+          analytics: 'Analytics'
+        },
+        ok: 'Accept all',
+        cancel: 'Accept essential cookies'
+      }
+    },
+    storageMethod: 'cookie',
+    cookieName: 'klaro',
+    elementID: 'klaro',
+    acceptAll: true,
+    services: [
+      {
+        name: 'posthog',
+        purposes: ['analytics'],
+        default: false,
+        optOut: true,
+        translations: {
+          de: {
+            title: 'Web-Analyse',
+            description: 'Sammelt anonymisierte Nutzungsdaten, um die Website zu verbessern.'
+          },
+          en: {
+            title: 'Web Analytics',
+            description: 'Collects anonymized usage data to improve the site.'
+          }
+        }
+      }
+    ]
+  };
+</script>
+<script
+  defer
+  data-config="klaroConfig"
+  src="/scripts/klaro.js"
+></script>
