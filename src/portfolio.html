@@ -1,5 +1,10 @@
+---
+lang: en
+---
+{% assign t = site.data.translations[page.lang] %}
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ page.lang }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -18,8 +23,7 @@
           <div class="@container">
             <!-- Hero -->
             <div class="flex w-full flex-col gap-6 px-4 py-10 @[480px]:gap-8 @[864px]:flex-row">
-              <div class="w-full bg-center bg-no-repeat bg-cover rounded-lg h-64 @[480px]:aspect-video @[480px]:h-auto @[480px]:min-w-[400px] @[864px]:w-full"
-                   style="background-image: url('nico_hero.jpg');"></div>
+              {% include hero.html %}
               <div class="flex flex-col gap-6 @[480px]:min-w-[400px] @[480px]:gap-8 @[864px]:justify-center">
                 <h1 class="mb-16 text-[#0d141b] text-3xl @[480px]:text-4xl @[864px]:text-5xl font-black leading-tight tracking-[-0.033em]">
                   Portfolio
@@ -32,13 +36,12 @@
 
             <!-- Selected Projects -->
             <div class="flex flex-wrap justify-center p-4 gap-3">
-              <!-- Opteinics -->
               <div class="flex h-full flex-col gap-4 rounded-lg w-full @[480px]:flex-1 @[480px]:min-w-60">
-                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style="background-image: url('opteinics.png');"></div>
+                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style="background-image: url('/images/saas.png');"></div>
                 <div>
                   <p class="text-[#0d141b] text-base font-medium leading-normal">SaaS Integration & Infrastructure Stability</p>
                   <p class="text-[#4c719a] text-sm font-normal leading-normal">Resolved fragmented tech stacks by integrating advanced SaaS tooling, stabilizing core infrastructure, and aligning stakeholders to support rapid growth.</p>
-                  <ul class="list-disc list-inside pl-6 text-[#4c719a] text-sm space-y-1 mt-2">
+                  <ul class="grid grid-cols-2 gap-x-4 gap-y-1 list-disc list-outside pl-6 text-[#4c719a] text-sm mt-2">
                     <li>Reduced deployment times by 50% through automated CI/CD pipelines</li>
                     <li>Achieved 99.9% platform uptime via infrastructure optimizations</li>
                     <li>Aligned engineering KPIs with business objectives to prioritize high-impact features</li>
@@ -46,13 +49,12 @@
                   <p class="text-[#4c719a] text-sm font-normal leading-normal mt-2">Leveraged Next.js, Vercel, Redis, and GraphQL to modernize the platform, collaborating with a 6-person engineering team over 12 months to deliver the new SaaS offering.</p>
                 </div>
               </div>
-              <!-- Textbroker -->
               <div class="flex h-full flex-col gap-4 rounded-lg w-full @[480px]:flex-1 @[480px]:min-w-60">
-                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style="background-image: url('textbroker.png');"></div>
+                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style="background-image: url('/images/infrastructure.png');"></div>
                 <div>
                   <p class="text-[#0d141b] text-base font-medium leading-normal">Infrastructure & Architecture Optimization</p>
                   <p class="text-[#4c719a] text-sm font-normal leading-normal">Eliminated infrastructure bottlenecks and redefined product architecture, boosting development velocity and system reliability.</p>
-                  <ul class="list-disc list-inside pl-6 text-[#4c719a] text-sm space-y-1 mt-2">
+                  <ul class="grid grid-cols-2 gap-x-4 gap-y-1 list-disc list-outside pl-6 text-[#4c719a] text-sm mt-2">
                     <li>Improved system response times by 40% through architecture redesign</li>
                     <li>Increased release frequency from monthly to bi-weekly cycles</li>
                     <li>Reduced infrastructure costs by 50% via resource optimization</li>
@@ -60,13 +62,12 @@
                   <p class="text-[#4c719a] text-sm font-normal leading-normal mt-2">Utilized Docker and transitioned to microservices architecture, working with a 7-person engineering team over 4 months to enhance scalability and deployment efficiency.</p>
                 </div>
               </div>
-              <!-- onOffice -->
               <div class="flex h-full flex-col gap-4 rounded-lg w-full @[480px]:flex-1 @[480px]:min-w-60">
-                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style="background-image: url('onoffice.png');"></div>
+                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style="background-image: url('/images/wordpress.png');"></div>
                 <div>
                   <p class="text-[#0d141b] text-base font-medium leading-normal">Web Department Consolidation & Standardization</p>
                   <p class="text-[#4c719a] text-sm font-normal leading-normal">Unified disparate web solutions into a common platform, enhancing maintainability and accelerating project delivery.</p>
-                  <ul class="list-disc list-inside pl-6 text-[#4c719a] text-sm space-y-1 mt-2">
+                  <ul class="grid grid-cols-2 gap-x-4 gap-y-1 list-disc list-outside pl-6 text-[#4c719a] text-sm mt-2">
                     <li>Reduced maintenance overhead by 30% through platform unification</li>
                     <li>Decreased time-to-market by 80% with standardized development processes</li>
                     <li>Improved cross-team collaboration via shared tooling and guidelines</li>
@@ -74,13 +75,12 @@
                   <p class="text-[#4c719a] text-sm font-normal leading-normal mt-2">Led a 22-person team through a 9-month rollout standardizing WordPress-based solutions into a unified, maintainable platform.</p>
                 </div>
               </div>
-              <!-- Branchbob -->
               <div class="flex h-full flex-col gap-4 rounded-lg w-full @[480px]:flex-1 @[480px]:min-w-60">
-                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style="background-image: url('branchbob_generated_image.png');"></div>
+                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style="background-image: url('/images/merchant.png');"></div>
                 <div>
                   <p class="text-[#0d141b] text-base font-medium leading-normal">Merchant Dashboard Scaling & SaaS Roadmap Execution</p>
                   <p class="text-[#4c719a] text-sm font-normal leading-normal">Rebuilt the merchant dashboard from the ground up, creating new shop interface designs and executing the SaaS roadmap to drastically improve performance and investor reporting clarity.</p>
-                  <ul class="list-disc list-inside pl-6 text-[#4c719a] text-sm space-y-1 mt-2">
+                  <ul class="grid grid-cols-2 gap-x-4 gap-y-1 list-disc list-outside pl-6 text-[#4c719a] text-sm mt-2">
                     <li>Increased dashboard user capacity by 3x without performance degradation</li>
                     <li>Accelerated feature releases by 35% through agile roadmap management</li>
                     <li>Enhanced investor reporting accuracy and transparency</li>
@@ -88,13 +88,12 @@
                   <p class="text-[#4c719a] text-sm font-normal leading-normal mt-2">Built using React, Go, and Postgres, collaborating with a 5-person team over 8 months to deliver a high-performance, scalable merchant dashboard.</p>
                 </div>
               </div>
-              <!-- Creditshelf -->
               <div class="flex h-full flex-col gap-4 rounded-lg w-full @[480px]:flex-1 @[480px]:min-w-60">
-                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style="background-image: url('creditshelf.png');"></div>
+                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style="background-image: url('/images/ipo.png');"></div>
                 <div>
                   <p class="text-[#0d141b] text-base font-medium leading-normal">IPO Readiness & Team Scaling</p>
                   <p class="text-[#4c719a] text-sm font-normal leading-normal">Led technology strategy and scaled technical teams through IPO, ensuring enterprise-grade reliability and compliance.</p>
-                  <ul class="list-disc list-inside pl-6 text-[#4c719a] text-sm space-y-1 mt-2">
+                  <ul class="grid grid-cols-2 gap-x-4 gap-y-1 list-disc list-outside pl-6 text-[#4c719a] text-sm mt-2">
                     <li>Grew engineering team from 10 to 35 members within 18 months</li>
                     <li>Implemented compliance frameworks meeting IPO regulatory standards</li>
                     <li>Achieved 99.95% system availability during critical IPO period</li>
@@ -102,32 +101,17 @@
                   <p class="text-[#4c719a] text-sm font-normal leading-normal mt-2">Built enterprise-grade IPO readiness tooling using Ruby on Rails, Postgres, AWS Lambda, and VueJS, collaborating with a 40-person engineering team over 18 months to ensure compliance and scalability.</p>
                 </div>
               </div>
-              <!-- Clark -->
               <div class="flex h-full flex-col gap-4 rounded-lg w-full @[480px]:flex-1 @[480px]:min-w-60">
-                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style="background-image: url('clark.png');"></div>
+                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style="background-image: url('/images/web.png');"></div>
                 <div>
                   <p class="text-[#0d141b] text-base font-medium leading-normal">Full-Stack Web & API Development</p>
                   <p class="text-[#4c719a] text-sm font-normal leading-normal">Developed robust front-end and back-end solutions, building APIs and interfaces that enhanced user engagement and operational efficiency.</p>
-                  <ul class="list-disc list-inside pl-6 text-[#4c719a] text-sm space-y-1 mt-2">
+                  <ul class="grid grid-cols-2 gap-x-4 gap-y-1 list-disc list-outside pl-6 text-[#4c719a] text-sm mt-2">
                     <li>Increased user engagement by 30% through intuitive UI improvements</li>
                     <li>Reduced API response times by 45% with optimized backend code</li>
                     <li>Enabled seamless third-party integrations boosting platform extensibility</li>
                   </ul>
                   <p class="text-[#4c719a] text-sm font-normal leading-normal mt-2">Built with Ruby on Rails and Ember.js, collaborating with an 8-person engineering team over 1 year to deliver rapid prototypes and validate core product concepts.</p>
-                </div>
-              </div>
-              <!-- Seventum -->
-              <div class="flex h-full flex-col gap-4 rounded-lg w-full @[480px]:flex-1 @[480px]:min-w-60">
-                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style="background-image: url('seventum.png');"></div>
-                <div>
-                  <p class="text-[#0d141b] text-base font-medium leading-normal">End-to-End Web & App Development</p>
-                  <p class="text-[#4c719a] text-sm font-normal leading-normal">Led full-stack development, including web front-end, back-end, app development, and design, delivering cohesive digital products.</p>
-                  <ul class="list-disc list-inside pl-6 text-[#4c719a] text-sm space-y-1 mt-2">
-                    <li>Delivered synchronized web and mobile apps within 6 months</li>
-                    <li>Improved user retention by 25% through UX enhancements</li>
-                    <li>Streamlined deployment pipelines reducing release cycles by 30%</li>
-                  </ul>
-                  <p class="text-[#4c719a] text-sm font-normal leading-normal mt-2">Executed mobile Android and full-stack web deliverables with a cross-functional 6-person team over 1 year, ensuring seamless user experiences.</p>
                 </div>
               </div>
             </div>

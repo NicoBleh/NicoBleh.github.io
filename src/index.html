@@ -6,11 +6,11 @@ lang: en
 <html lang="en">
 
 <head>
-	<link rel="stylesheet" href="./styles/fonts.css" />
+	<link rel="stylesheet" href="/styles/fonts.css" />
 
 	<title>Nico Bleh Consulting</title>
 	<link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
-	<link href="./styles/output.css" rel="stylesheet">
+	<link href="/styles/output.css" rel="stylesheet">
 
 	<meta name="viewport" content="width=device-width">
 </head>
@@ -24,9 +24,7 @@ lang: en
 				<div class="layout-content-container flex flex-col w-full max-w-[960px] flex-1">
 					<div class="@container">
 						<div class="flex w-full flex-col gap-6 px-4 py-10 @[480px]:gap-8 @[864px]:flex-row">
-							<div
-								class="w-full bg-center bg-no-repeat bg-cover rounded-lg h-64 @[480px]:aspect-video @[480px]:h-auto @[480px]:min-w-[400px] @[864px]:w-full"
-								style='background-image: url("nico_hero.jpg");'></div>
+							{% include hero.html %}
 							<div class="flex flex-col gap-6 @[480px]:min-w-[400px] @[480px]:gap-8 @[864px]:justify-center">
 								<div class="flex flex-col gap-2 text-left">
 									<h1
