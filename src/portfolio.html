@@ -6,6 +6,7 @@ lang: de
 <!DOCTYPE html>
 <html lang="{{ page.lang }}">
 <head>
+  {% include posthog.html %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio | Nico Bleh</title>
@@ -37,7 +38,6 @@ lang: de
             <h2 class="text-[#0d141b] text-[28px] @[480px]:text-4xl font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
               {{ t.projects_title }}
             </h2>
-            <!-- Selected Projects -->
             <div class="flex flex-wrap justify-center p-4 gap-3">
               <div class="flex h-full flex-col gap-4 rounded-lg w-full @[480px]:flex-1 @[480px]:min-w-60">
                 <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style="background-image: url('/images/saas.png');"></div>
