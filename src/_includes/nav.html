@@ -9,22 +9,25 @@
                     fill="currentColor"></path>
             </svg>
         </div>
-        <h2 class="text-[#0d141b] text-lg font-bold leading-tight tracking-[-0.015em]"><a href="/">Nico Bleh</a></h2>
-    </div>
-    <div class="flex flex-1 justify-end gap-8">
-        <div class="flex items-center gap-9">
+        <h2 class="text-[#0d141b] text-lg font-bold leading-tight tracking-[-0.015em]">
             {% if page.lang == 'de' %}
-            <a class="text-[#0d141b] text-sm font-medium leading-normal" href="/">{{ t.nav_home }}</a>
-            {% else %}
-            <a class="text-[#0d141b] text-sm font-medium leading-normal" href="/en">{{ t.nav_home }}</a>
-            {% endif %}
+            <a href="/">
+                {% else %}
+                <a href="/en">
+                    {% endif %}
+                    Nico Bleh</a>
+
+        </h2>
+    </div>
+    <div class="flex flex-1 justify-end gap-x-5 gap-y-4 flex-wrap-reverse">
+        <div class="flex items-center gap-5">
             <a class="text-[#0d141b] text-sm font-medium leading-normal" href="about">{{ t.nav_about }}</a>
             <a class="text-[#0d141b] text-sm font-medium leading-normal" href="services">{{ t.nav_services }}</a>
             <a class="text-[#0d141b] text-sm font-medium leading-normal" href="portfolio">{{ t.nav_portfolio }}</a>
         </div>
-        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-x-5 rounded-4xl bg-blue-500 p-2">
             <a href="{% if page.lang == 'de' %}/en/{% else %}/{% endif %}"
-                class="text-[#0d141b] text-sm font-medium leading-normal">
+                class="text-white text-sm font-medium leading-normal">
                 {% if page.lang == 'de' %}EN{% else %}DE{% endif %}
             </a>
         </div>
