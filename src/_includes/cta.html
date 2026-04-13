@@ -1,17 +1,22 @@
 {% assign t = site.data.translations[page.lang] %}
 <div class="@container">
-    <div class="flex flex-col justify-end gap-6 px-4 py-10 @[480px]:gap-8 @[480px]:px-10 @[480px]:py-20">
-        <div class="flex flex-col gap-2 text-center">
+    <div class="flex flex-col justify-end gap-6 px-4 py-10 @[480px]:gap-8 @[480px]:px-10 @[480px]:py-20 bg-[#0f172a] rounded-xl border border-[#1e3a5f] my-4 relative overflow-hidden">
+        <!-- subtle glow -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-px bg-[#22d3ee]/40"></div>
+        <div class="flex flex-col gap-3 text-center">
             <h1
-                class="text-[#0d141b] tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px] justify-center mx-auto">
+                class="text-[#f1f5f9] tracking-light text-[28px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px] justify-center mx-auto">
                 {{ t.cta_title }}
             </h1>
+            {% if t.cta_subtitle %}
+            <p class="text-[#94a3b8] text-base max-w-[560px] mx-auto">{{ t.cta_subtitle }}</p>
+            {% endif %}
         </div>
         <div class="flex flex-1 justify-center">
             <div class="flex justify-center">
                 <a href="https://forms.gle/x745HeiKKSRCv5tH7" target="_blank" rel="noopener">
                     <button
-                        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#137beb] text-slate-50 text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] grow">
+                        class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#22d3ee] text-[#0a0f1a] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] grow hover:bg-[#06b6d4] transition-colors">
                         <span class="truncate">{{ t.cta_button_label }}</span>
                     </button>
                 </a>

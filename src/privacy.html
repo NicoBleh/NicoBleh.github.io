@@ -8,60 +8,53 @@ lang: de
 
 <head>
   {% include posthog.html %}
-    <meta charset="utf-8">
-    <title>Datenschutzerklärung | Nico Bleh</title>
-
-    <link rel="stylesheet" href="/styles/fonts.css" />
-
-    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
-    <link href="/styles/output.css" rel="stylesheet">
-
-    <meta name="viewport" content="width=device-width">
-
-
+  <meta charset="utf-8">
+  <title>{{ t.privacy_title }} | Nico Bleh</title>
+  <link rel="stylesheet" href="/styles/fonts.css" />
+  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+  <link href="/styles/output.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width">
 </head>
 
-<body>
+<body class="bg-[#0a0f1a]" style='font-family: Inter, "Noto Sans", sans-serif;'>
     {% include nav.html %}
 
-    <main class="px-4 py-10 max-w-[960px] mx-auto">
-        <h1 class="text-3xl font-bold mb-6">{{ t.privacy_title }}</h1>
+    <main class="px-4 py-10 max-w-[960px] mx-auto text-[#94a3b8]">
+        <h1 class="text-3xl font-bold mb-6 text-[#f1f5f9]">{{ t.privacy_title }}</h1>
 
-        <p>
-            {{ t.privacy_intro }}
-        </p>
+        <p class="leading-relaxed mb-6">{{ t.privacy_intro }}</p>
 
-        <h2 class="text-xl font-semibold mt-8 mb-4">{{ t.privacy_section1_title }}</h2>
-        <p>{{ t.privacy_section1_text | newline_to_br }}</p>
+        <h2 class="text-xl font-semibold mt-8 mb-4 text-[#22d3ee]">{{ t.privacy_section1_title }}</h2>
+        <p class="leading-relaxed">{{ t.privacy_section1_text | newline_to_br }}</p>
 
-        <h2 class="text-xl font-semibold mt-8 mb-4">{{ t.privacy_section2_title }}</h2>
-        <h3 class="font-medium mt-4">{{ t.privacy_section2a_title }}</h3>
-        <p>{{ t.privacy_section2a_text }}</p>
-        <ul class="list-disc list-inside ml-6 mt-2">
+        <h2 class="text-xl font-semibold mt-8 mb-4 text-[#22d3ee]">{{ t.privacy_section2_title }}</h2>
+        <h3 class="font-medium mt-4 text-[#f1f5f9]">{{ t.privacy_section2a_title }}</h3>
+        <p class="mt-2 leading-relaxed">{{ t.privacy_section2a_text }}</p>
+        <ul class="list-disc list-inside ml-6 mt-2 space-y-1">
           {% for item in t.privacy_section2a_list %}
             <li>{{ item }}</li>
           {% endfor %}
         </ul>
-        <p>{{ t.privacy_section2a_text2 }}</p>
+        <p class="mt-2 leading-relaxed">{{ t.privacy_section2a_text2 }}</p>
 
-        <h3 class="font-medium mt-6">{{ t.privacy_section2b_title }}</h3>
-        <p>{{ t.privacy_section2b_text }}</p>
+        <h3 class="font-medium mt-6 text-[#f1f5f9]">{{ t.privacy_section2b_title }}</h3>
+        <p class="mt-2 leading-relaxed">{{ t.privacy_section2b_text }}</p>
 
-        <h2 class="text-xl font-semibold mt-8 mb-4">{{ t.privacy_section3_title }}</h2>
-        <p>{{ t.privacy_section3_text }}</p>
+        <h2 class="text-xl font-semibold mt-8 mb-4 text-[#22d3ee]">{{ t.privacy_section3_title }}</h2>
+        <p class="leading-relaxed">{{ t.privacy_section3_text }}</p>
 
-        <h2 class="text-xl font-semibold mt-8 mb-4">{{ t.privacy_section4_title }}</h2>
-        <p>{{ t.privacy_section4_text }}</p>
+        <h2 class="text-xl font-semibold mt-8 mb-4 text-[#22d3ee]">{{ t.privacy_section4_title }}</h2>
+        <p class="leading-relaxed">{{ t.privacy_section4_text }}</p>
 
-        <h2 class="text-xl font-semibold mt-8 mb-4">{{ t.privacy_section5_title }}</h2>
-        <p>{{ t.privacy_section5_text1 }}</p>
-        <p>{{ t.privacy_section5_text2 }}</p>
+        <h2 class="text-xl font-semibold mt-8 mb-4 text-[#22d3ee]">{{ t.privacy_section5_title }}</h2>
+        <p class="leading-relaxed mb-2">{{ t.privacy_section5_text1 }}</p>
+        <p class="leading-relaxed">{{ t.privacy_section5_text2 }}</p>
 
-        <h2 class="text-xl font-semibold mt-8 mb-4">{{ t.privacy_section6_title }}</h2>
-        <p>{{ t.privacy_section6_text }}</p>
+        <h2 class="text-xl font-semibold mt-8 mb-4 text-[#22d3ee]">{{ t.privacy_section6_title }}</h2>
+        <p class="leading-relaxed">{{ t.privacy_section6_text }}</p>
 
-        <h2 class="text-xl font-semibold mt-8 mb-4">{{ t.privacy_section7_title }}</h2>
-        <p>{{ t.privacy_section7_text }}</p>
+        <h2 class="text-xl font-semibold mt-8 mb-4 text-[#22d3ee]">{{ t.privacy_section7_title }}</h2>
+        <p class="leading-relaxed">{{ t.privacy_section7_text }}</p>
     </main>
 
     {% include footer.html %}

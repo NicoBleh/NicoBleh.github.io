@@ -1,39 +1,37 @@
 <header
-    class="flex flex-wrap items-center justify-between whitespace-nowrap border-b border-solid border-b-[#e7edf3] px-4 @[480px]:px-10 py-3">
+    class="flex flex-wrap items-center justify-between whitespace-nowrap border-b border-solid border-b-[#1e3a5f] px-4 @[480px]:px-10 py-3 bg-[#0a0f1a] sticky top-0 z-50">
     {% assign t = site.data.translations[page.lang] %}
-    <div class="flex items-center gap-4 text-[#0d141b]">
-        <div class="size-4">
-            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M24 4C25.7818 14.2173 33.7827 22.2182 44 24C33.7827 25.7818 25.7818 33.7827 24 44C22.2182 33.7827 14.2173 25.7818 4 24C14.2173 22.2182 22.2182 14.2173 24 4Z"
-                    fill="currentColor"></path>
+    <div class="flex items-center gap-4">
+        <div class="size-5 text-[#22d3ee]">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L3 7V12C3 16.55 6.84 20.74 12 22C17.16 20.74 21 16.55 21 12V7L12 2Z" stroke="#22d3ee" stroke-width="1.5" stroke-linejoin="round"/>
+                <path d="M9 12L11 14L15 10" stroke="#22d3ee" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
         </div>
-        <h2 class="text-[#0d141b] text-lg font-bold leading-tight tracking-[-0.015em]">
+        <h2 class="text-[#f1f5f9] text-lg font-bold leading-tight tracking-[-0.015em]">
             {% if page.lang == 'de' %}
-            <a href="/">
+            <a href="/" class="hover:text-[#22d3ee] transition-colors">
                 {% else %}
-                <a href="/en">
+                <a href="/en" class="hover:text-[#22d3ee] transition-colors">
                     {% endif %}
                     Nico Bleh</a>
-
         </h2>
     </div>
     <div class="flex flex-1 justify-end gap-x-5 gap-y-4 flex-wrap-reverse">
         <div class="flex items-center gap-5">
-            <a class="text-[#0d141b] text-sm font-medium leading-normal" href="about">{{ t.nav_about }}</a>
-            <a class="text-[#0d141b] text-sm font-medium leading-normal" href="services">{{ t.nav_services }}</a>
-            <a class="text-[#0d141b] text-sm font-medium leading-normal" href="portfolio">{{ t.nav_portfolio }}</a>
+            <a class="text-[#94a3b8] text-sm font-medium leading-normal hover:text-[#22d3ee] transition-colors" href="about">{{ t.nav_about }}</a>
+            <a class="text-[#94a3b8] text-sm font-medium leading-normal hover:text-[#22d3ee] transition-colors" href="services">{{ t.nav_services }}</a>
+            <a class="text-[#94a3b8] text-sm font-medium leading-normal hover:text-[#22d3ee] transition-colors" href="portfolio">{{ t.nav_portfolio }}</a>
         </div>
-        <div class="flex items-center gap-x-5 rounded-4xl bg-blue-500 p-2">
+        <div class="flex items-center rounded-md border border-[#1e3a5f] bg-[#111827] px-3 py-1">
             <a href="{% if page.lang == 'de' %}/en/{% else %}/{% endif %}"
-                class="text-white text-sm font-medium leading-normal">
+                class="text-[#94a3b8] text-sm font-medium leading-normal hover:text-[#22d3ee] transition-colors">
                 {% if page.lang == 'de' %}EN{% else %}DE{% endif %}
             </a>
         </div>
         <a href="https://forms.gle/x745HeiKKSRCv5tH7" target="_blank" rel="noopener">
             <button
-                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#137beb] text-slate-50 text-sm font-bold leading-normal tracking-[0.015em]">
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#22d3ee] text-[#0a0f1a] text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[#06b6d4] transition-colors">
                 <span class="truncate">Get in Touch</span>
             </button>
         </a>

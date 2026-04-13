@@ -1,31 +1,44 @@
 {% assign t = site.data.translations[page.lang] %}
-<h2 class="text-[#0d141b] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+<h2 class="text-[#22d3ee] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
     {{ t.projects_title }}</h2>
-<div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
     <div class="flex items-stretch p-4 gap-3">
-        <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
-            <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col"
-                style='background-image: url("/images/saas.png");'></div>
+
+        <!-- Project 1: Web App Pentest -->
+        <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60 border border-[#1e3a5f] bg-[#111827] p-4 card-glow">
+            <div class="flex items-center gap-2">
+                <span class="inline-flex items-center rounded-full bg-[#22d3ee]/10 border border-[#22d3ee]/30 px-2 py-0.5 text-xs font-medium text-[#22d3ee]">Pentest</span>
+                <span class="inline-flex items-center rounded-full bg-[#dc2626]/10 border border-[#dc2626]/30 px-2 py-0.5 text-xs font-medium text-[#f87171]">Critical</span>
+            </div>
             <div>
-                <p class="text-[#0d141b] text-base font-medium leading-normal">{{ t.project1_title }}</p>
-                <p class="text-[#4c719a] text-sm font-normal leading-normal">{{ t.project1_desc }}</p>
+                <p class="text-[#f1f5f9] text-base font-medium leading-normal">{{ t.project1_title }}</p>
+                <p class="text-[#94a3b8] text-sm font-normal leading-normal mt-1">{{ t.project1_desc }}</p>
             </div>
         </div>
-        <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
-            <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col"
-                style='background-image: url("/images/process.png");'></div>
+
+        <!-- Project 2: Red Team -->
+        <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60 border border-[#1e3a5f] bg-[#111827] p-4 card-glow">
+            <div class="flex items-center gap-2">
+                <span class="inline-flex items-center rounded-full bg-[#dc2626]/10 border border-[#dc2626]/30 px-2 py-0.5 text-xs font-medium text-[#f87171]">Red Team</span>
+                <span class="inline-flex items-center rounded-full bg-[#f59e0b]/10 border border-[#f59e0b]/30 px-2 py-0.5 text-xs font-medium text-[#fbbf24]">APT Sim</span>
+            </div>
             <div>
-                <p class="text-[#0d141b] text-base font-medium leading-normal">{{ t.project2_title }}</p>
-                <p class="text-[#4c719a] text-sm font-normal leading-normal">{{ t.project2_desc }}</p>
+                <p class="text-[#f1f5f9] text-base font-medium leading-normal">{{ t.project2_title }}</p>
+                <p class="text-[#94a3b8] text-sm font-normal leading-normal mt-1">{{ t.project2_desc }}</p>
             </div>
         </div>
-        <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
-            <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col"
-                style='background-image: url("/images/ecommerce.png");'></div>
+
+        <!-- Project 3: Cloud Audit -->
+        <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60 border border-[#1e3a5f] bg-[#111827] p-4 card-glow">
+            <div class="flex items-center gap-2">
+                <span class="inline-flex items-center rounded-full bg-[#22d3ee]/10 border border-[#22d3ee]/30 px-2 py-0.5 text-xs font-medium text-[#22d3ee]">Cloud</span>
+                <span class="inline-flex items-center rounded-full bg-[#4ade80]/10 border border-[#4ade80]/30 px-2 py-0.5 text-xs font-medium text-[#4ade80]">AWS</span>
+            </div>
             <div>
-                <p class="text-[#0d141b] text-base font-medium leading-normal">{{ t.project3_title }}</p>
-                <p class="text-[#4c719a] text-sm font-normal leading-normal">{{ t.project3_desc }}</p>
+                <p class="text-[#f1f5f9] text-base font-medium leading-normal">{{ t.project3_title }}</p>
+                <p class="text-[#94a3b8] text-sm font-normal leading-normal mt-1">{{ t.project3_desc }}</p>
             </div>
         </div>
+
     </div>
 </div>

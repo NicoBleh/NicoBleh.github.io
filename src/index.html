@@ -10,15 +10,16 @@ lang: de
 	{% include posthog.html %}
 	<link rel="stylesheet" href="/styles/fonts.css" />
 
-	<title>Nico Bleh Consulting</title>
+	<title>Nico Bleh – Ethical Hacker & Cybersecurity Consultant</title>
+	<meta name="description" content="Ethical Hacker und Senior Cybersecurity Consultant. Penetration Testing, Red Teaming, Security Audits und Awareness Training für Unternehmen.">
 	<link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
 	<link href="/styles/output.css" rel="stylesheet">
 
 	<meta name="viewport" content="width=device-width">
 </head>
 
-<body>
-	<div class="relative flex size-full @[480px]:min-h-screen flex-col bg-slate-50 group/design-root overflow-x-hidden"
+<body class="bg-[#0a0f1a]">
+	<div class="relative flex size-full @[480px]:min-h-screen flex-col bg-[#0a0f1a] group/design-root overflow-x-hidden"
 		style='font-family: Inter, "Noto Sans", sans-serif;'>
 		<div class="layout-container flex h-full grow flex-col">
 			{% include nav.html %}
@@ -29,16 +30,17 @@ lang: de
 							{% include hero.html %}
 							<div class="flex flex-col gap-6 @[480px]:min-w-[400px] @[480px]:gap-8 @[864px]:justify-center">
 								<div class="flex flex-col gap-2 text-left">
-									<h1 class="text-[#0d141b] text-3xl @[480px]:text-4xl @[864px]:text-5xl font-black leading-tight tracking-[-0.033em]">
+									<span class="text-[#22d3ee] text-sm font-mono tracking-widest uppercase mb-1">// Security by Offense</span>
+									<h1 class="text-[#f1f5f9] text-3xl @[480px]:text-4xl @[864px]:text-5xl font-black leading-tight tracking-[-0.033em]">
 										{{ t.hero_title }}
 									</h1>
-									<h2 class="text-[#0d141b] text-base @[480px]:text-lg font-normal leading-normal">
+									<h2 class="text-[#94a3b8] text-base @[480px]:text-lg font-normal leading-normal mt-2">
 										{{ t.hero_subtitle }}
 									</h2>
 								</div>
 								<a href="https://forms.gle/x745HeiKKSRCv5tH7" target="_blank" rel="noopener">
 									<button
-										class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#137beb] text-slate-50 text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]">
+										class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#22d3ee] text-[#0a0f1a] text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] hover:bg-[#06b6d4] transition-colors">
 										<span class="truncate">{{ t.hero_button_label }}</span>
 									</button>
 								</a>

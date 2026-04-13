@@ -9,16 +9,15 @@ lang: de
 <head>
 	{% include posthog.html %}
 	<link rel="stylesheet" href="/styles/fonts.css" />
-
-	<title>Nico Bleh Consulting</title>
+	<title>Leistungen | Nico Bleh – Ethical Hacker & Cybersecurity Consultant</title>
+	<meta name="description" content="Penetration Testing, Red Teaming, Security Audits und Awareness Training – Cybersecurity-Dienstleistungen von Nico Bleh.">
 	<link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
 	<link href="/styles/output.css" rel="stylesheet">
-
 	<meta name="viewport" content="width=device-width">
 </head>
 
-<body>
-	<div class="relative flex size-full @[480px]:min-h-screen flex-col bg-slate-50 group/design-root overflow-x-hidden"
+<body class="bg-[#0a0f1a]">
+	<div class="relative flex size-full @[480px]:min-h-screen flex-col bg-[#0a0f1a] group/design-root overflow-x-hidden"
 		style='font-family: Inter, "Noto Sans", sans-serif;'>
 		<div class="layout-container flex h-full grow flex-col">
 
@@ -26,43 +25,141 @@ lang: de
 
 			<div class="px-4 @[480px]:px-40 flex flex-1 justify-center py-5">
 				<div class="layout-content-container flex flex-col w-full max-w-[960px] flex-1">
+
+					<!-- Hero -->
 					<div class="@container">
 						<div class="flex w-full flex-col gap-6 px-4 py-10 @[480px]:gap-8 @[864px]:flex-row">
 							{% include hero.html %}
-							<div
-								class="flex flex-col gap-6 @[480px]:min-w-[400px] @[480px]:gap-8 @[864px]:justify-center">
+							<div class="flex flex-col gap-6 @[480px]:min-w-[400px] @[480px]:gap-8 @[864px]:justify-center">
 								<div class="flex flex-col gap-2 text-left">
-									<h1 class="mb-16 text-[#0d141b] text-3xl @[480px]:text-4xl @[864px]:text-5xl font-black leading-tight tracking-[-0.033em]">
+									<span class="text-[#22d3ee] text-sm font-mono tracking-widest uppercase mb-1">// Services</span>
+									<h1 class="text-[#f1f5f9] text-3xl @[480px]:text-4xl @[864px]:text-5xl font-black leading-tight tracking-[-0.033em]">
 										{{ t.services_header }}
 									</h1>
-									<h2 class="text-[#0d141b] text-base @[480px]:text-lg font-normal leading-normal">
+									<p class="text-[#94a3b8] text-base @[480px]:text-lg font-normal leading-normal mt-2">
 										{{ t.services_intro }}
-									</h2>
+									</p>
 								</div>
 							</div>
 						</div>
 					</div>
 
-					<!-- Services Section -->
-					<section class="px-4 py-10">
-						<h2 class="text-[#0d141b] text-[28px] @[480px]:text-4xl font-bold leading-tight tracking-[-0.015em]">{{ t.services_header }}</h2>
-						<ul class="list-disc list-outside pl-6 text-[#4c719a] text-base @[480px]:text-lg mt-4 space-y-4">
-							<li>{{ t.services_list1 }}</li>
-							<li>{{ t.services_list2 }}</li>
-							<li>{{ t.services_list3 }}</li>
-							<li>{{ t.services_list4 }}</li>
-						</ul>
+					<!-- Services Cards -->
+					<section class="px-4 py-10 border-t border-[#1e3a5f]">
+						<div class="grid gap-4 @[640px]:grid-cols-2">
+
+							<!-- Penetration Testing -->
+							<div class="bg-[#111827] border border-[#1e3a5f] rounded-xl p-6 card-glow">
+								<div class="flex items-center gap-3 mb-4">
+									<div class="p-2 rounded-lg bg-[#22d3ee]/10 text-[#22d3ee]">
+										<svg xmlns="http://www.w3.org/2000/svg" width="22px" height="22px" fill="none" viewBox="0 0 24 24">
+											<path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</div>
+									<h3 class="text-[#f1f5f9] text-lg font-bold">Penetration Testing</h3>
+								</div>
+								<p class="text-[#94a3b8] text-sm leading-relaxed">{{ t.services_list1 }}</p>
+							</div>
+
+							<!-- Red Teaming -->
+							<div class="bg-[#111827] border border-[#1e3a5f] rounded-xl p-6 card-glow">
+								<div class="flex items-center gap-3 mb-4">
+									<div class="p-2 rounded-lg bg-[#dc2626]/10 text-[#f87171]">
+										<svg xmlns="http://www.w3.org/2000/svg" width="22px" height="22px" fill="none" viewBox="0 0 24 24">
+											<path d="M12 2L3 7V12C3 16.55 6.84 20.74 12 22C17.16 20.74 21 16.55 21 12V7L12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+											<path d="M12 8v4m0 4h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+										</svg>
+									</div>
+									<h3 class="text-[#f1f5f9] text-lg font-bold">Red Teaming & Ethical Hacking</h3>
+								</div>
+								<p class="text-[#94a3b8] text-sm leading-relaxed">{{ t.services_list2 }}</p>
+							</div>
+
+							<!-- Security Consulting -->
+							<div class="bg-[#111827] border border-[#1e3a5f] rounded-xl p-6 card-glow">
+								<div class="flex items-center gap-3 mb-4">
+									<div class="p-2 rounded-lg bg-[#22d3ee]/10 text-[#22d3ee]">
+										<svg xmlns="http://www.w3.org/2000/svg" width="22px" height="22px" fill="none" viewBox="0 0 24 24">
+											<path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2m-6 9l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</div>
+									<h3 class="text-[#f1f5f9] text-lg font-bold">Security Consulting & Audits</h3>
+								</div>
+								<p class="text-[#94a3b8] text-sm leading-relaxed">{{ t.services_list3 }}</p>
+							</div>
+
+							<!-- Awareness Training -->
+							<div class="bg-[#111827] border border-[#1e3a5f] rounded-xl p-6 card-glow">
+								<div class="flex items-center gap-3 mb-4">
+									<div class="p-2 rounded-lg bg-[#4ade80]/10 text-[#4ade80]">
+										<svg xmlns="http://www.w3.org/2000/svg" width="22px" height="22px" fill="none" viewBox="0 0 24 24">
+											<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											<circle cx="9" cy="7" r="4" stroke="currentColor" stroke-width="1.5"/>
+											<path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</div>
+									<h3 class="text-[#f1f5f9] text-lg font-bold">Security Awareness Training</h3>
+								</div>
+								<p class="text-[#94a3b8] text-sm leading-relaxed">{{ t.services_list4 }}</p>
+							</div>
+
+							<!-- Cloud Security -->
+							<div class="bg-[#111827] border border-[#1e3a5f] rounded-xl p-6 card-glow">
+								<div class="flex items-center gap-3 mb-4">
+									<div class="p-2 rounded-lg bg-[#22d3ee]/10 text-[#22d3ee]">
+										<svg xmlns="http://www.w3.org/2000/svg" width="22px" height="22px" fill="none" viewBox="0 0 24 24">
+											<path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</div>
+									<h3 class="text-[#f1f5f9] text-lg font-bold">Cloud Security</h3>
+								</div>
+								<p class="text-[#94a3b8] text-sm leading-relaxed">{{ t.services_list5 }}</p>
+							</div>
+
+							<!-- AI Security (Coming Soon) -->
+							<div class="bg-[#111827] border border-[#1e3a5f] rounded-xl p-6 opacity-60 relative overflow-hidden">
+								<div class="flex items-center gap-3 mb-4">
+									<div class="p-2 rounded-lg bg-[#22d3ee]/10 text-[#22d3ee]">
+										<svg xmlns="http://www.w3.org/2000/svg" width="22px" height="22px" fill="none" viewBox="0 0 24 24">
+											<path d="M12 2a5 5 0 1 1 0 10A5 5 0 0 1 12 2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M17 8h2a2 2 0 0 1 2 2v1M7 8H5a2 2 0 0 0-2 2v1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+										</svg>
+									</div>
+									<div>
+										<h3 class="text-[#f1f5f9] text-lg font-bold">AI Security</h3>
+										<span class="text-[10px] font-mono text-[#22d3ee] uppercase tracking-widest">Coming Soon</span>
+									</div>
+								</div>
+								<p class="text-[#94a3b8] text-sm leading-relaxed">{{ t.services_list6 }}</p>
+							</div>
+
+						</div>
 					</section>
 
-					<!-- Why Choose Me Section -->
-					<section class="px-4 py-10 bg-white">
-						<h2 class="text-[#0d141b] text-[28px] @[480px]:text-4xl font-bold leading-tight tracking-[-0.015em]">{{ t.why_title }}</h2>
-						<ul class="list-disc list-outside pl-6 text-[#4c719a] text-base @[480px]:text-lg mt-4 space-y-2">
-							<li>{{ t.why_list1 }}</li>
-							<li>{{ t.why_list2 }}</li>
-							<li>{{ t.why_list3 }}</li>
-							<li>{{ t.why_list4 }}</li>
-						</ul>
+					<!-- Why Choose Me -->
+					<section class="px-4 py-10 border-t border-[#1e3a5f]">
+						<h2 class="text-[#22d3ee] text-[24px] @[480px]:text-3xl font-bold leading-tight tracking-[-0.015em] mb-6">
+							{{ t.why_title }}
+						</h2>
+						<div class="grid gap-4 @[640px]:grid-cols-2">
+							<div class="flex items-start gap-3 bg-[#111827] border border-[#1e3a5f] rounded-xl p-5">
+								<span class="text-[#22d3ee] font-mono text-lg font-bold shrink-0">01</span>
+								<p class="text-[#94a3b8] text-sm leading-relaxed">{{ t.why_list1 }}</p>
+							</div>
+							<div class="flex items-start gap-3 bg-[#111827] border border-[#1e3a5f] rounded-xl p-5">
+								<span class="text-[#22d3ee] font-mono text-lg font-bold shrink-0">02</span>
+								<p class="text-[#94a3b8] text-sm leading-relaxed">{{ t.why_list2 }}</p>
+							</div>
+							<div class="flex items-start gap-3 bg-[#111827] border border-[#1e3a5f] rounded-xl p-5">
+								<span class="text-[#22d3ee] font-mono text-lg font-bold shrink-0">03</span>
+								<p class="text-[#94a3b8] text-sm leading-relaxed">{{ t.why_list3 }}</p>
+							</div>
+							<div class="flex items-start gap-3 bg-[#111827] border border-[#1e3a5f] rounded-xl p-5">
+								<span class="text-[#22d3ee] font-mono text-lg font-bold shrink-0">04</span>
+								<p class="text-[#94a3b8] text-sm leading-relaxed">{{ t.why_list4 }}</p>
+							</div>
+						</div>
 					</section>
 
 					{% include cta.html %}

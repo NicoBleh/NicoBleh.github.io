@@ -9,37 +9,29 @@ lang: de
   {% include posthog.html %}
   <meta charset="utf-8">
   <title>{{ t.nav_impressum }} | Nico Bleh</title>
-
-    <link rel="stylesheet" href="/styles/fonts.css" />
-
-	<link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
-	<link href="/styles/output.css" rel="stylesheet">
-
-	<meta name="viewport" content="width=device-width">
-
+  <link rel="stylesheet" href="/styles/fonts.css" />
+  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+  <link href="/styles/output.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width">
 </head>
-<body>
+<body class="bg-[#0a0f1a]" style='font-family: Inter, "Noto Sans", sans-serif;'>
   {% include nav.html %}
 
-  <main class="px-4 py-10 max-w-[960px] mx-auto prose">
-    <h1 class="text-3xl font-bold mb-6">{{ t.nav_impressum }}</h1>
-    <section>
-      <p><strong>{{ t.imprint_responsible_title }}</strong></p>
-      <p>Nico Bleh</p>
+  <main class="px-4 py-10 max-w-[960px] mx-auto text-[#94a3b8]">
+    <h1 class="text-3xl font-bold mb-8 text-[#f1f5f9]">{{ t.nav_impressum }}</h1>
+
+    <section class="bg-[#111827] border border-[#1e3a5f] rounded-xl p-6 mb-6">
+      <p class="text-[#22d3ee] text-xs font-mono uppercase tracking-widest mb-3">{{ t.imprint_responsible_title }}</p>
+      <p class="text-[#f1f5f9] font-semibold">Nico Bleh</p>
       <p>Westhofener Str. 7</p>
       <p>67596 Dittelsheim-Heßloch</p>
       <p>Germany</p>
     </section>
 
-    <section class="mt-8">
-      <h2>{{ t.imprint_contact_title }}</h2>
-      <p>{{ t.imprint_email_label }} <a href="mailto:nico@nicobleh.com">nico@nicobleh.com</a></p>
+    <section class="bg-[#111827] border border-[#1e3a5f] rounded-xl p-6 mb-6">
+      <p class="text-[#22d3ee] text-xs font-mono uppercase tracking-widest mb-3">{{ t.imprint_contact_title }}</p>
+      <p>{{ t.imprint_email_label }} <a href="mailto:nico@nicobleh.com" class="text-[#22d3ee] hover:underline">nico@nicobleh.com</a></p>
       <p>{{ t.imprint_phone_label }} +49 176 42048043</p>
-    </section>
-
-    <section class="mt-8 hidden">
-      <h2>{{ t.imprint_vat_title }}</h2>
-      <p>{{ t.imprint_vat_text }}</p>
     </section>
   </main>
 

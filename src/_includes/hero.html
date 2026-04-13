@@ -1,3 +1,7 @@
-<div class="w-full bg-center bg-no-repeat bg-cover rounded-lg h-64 @[480px]:aspect-video @[480px]:h-auto @[480px]:min-w-[400px] @[864px]:w-full"
+<div class="relative w-full bg-center bg-no-repeat bg-cover rounded-lg h-64 @[480px]:aspect-video @[480px]:h-auto @[480px]:min-h-[360px] @[480px]:min-w-[400px] @[864px]:w-full overflow-hidden"
     style='background-image: url("/images/nico_hero.jpg");'>
+    <!-- Dark overlay with cyan tint for tech look -->
+    <div class="absolute inset-0 bg-gradient-to-br from-[#0a0f1a]/60 via-transparent to-[#0a0f1a]/40"></div>
+    <!-- Subtle grid overlay -->
+    <div class="absolute inset-0" style="background-image: linear-gradient(rgba(34,211,238,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(34,211,238,0.04) 1px, transparent 1px); background-size: 40px 40px;"></div>
 </div>

@@ -9,16 +9,15 @@ lang: de
 <head>
 	{% include posthog.html %}
 	<link rel="stylesheet" href="/styles/fonts.css" />
-
-	<title>Nico Bleh Consulting</title>
+	<title>Über mich | Nico Bleh – Ethical Hacker & Cybersecurity Consultant</title>
+	<meta name="description" content="Über Nico Bleh – Ethical Hacker, Senior Cybersecurity Consultant und Penetration Tester.">
 	<link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
 	<link href="/styles/output.css" rel="stylesheet">
-
 	<meta name="viewport" content="width=device-width">
 </head>
 
-<body>
-	<div class="relative flex size-full @[480px]:min-h-screen flex-col bg-slate-50 group/design-root overflow-x-hidden"
+<body class="bg-[#0a0f1a]">
+	<div class="relative flex size-full @[480px]:min-h-screen flex-col bg-[#0a0f1a] group/design-root overflow-x-hidden"
 		style='font-family: Inter, "Noto Sans", sans-serif;'>
 		<div class="layout-container flex h-full grow flex-col">
 
@@ -26,65 +25,120 @@ lang: de
 
 			<div class="px-4 @[480px]:px-40 flex flex-1 justify-center py-5">
 				<div class="layout-content-container flex flex-col w-full max-w-[960px] flex-1">
+
+					<!-- Hero -->
 					<div class="@container">
 						<div class="flex w-full flex-col gap-6 px-4 py-10 @[480px]:gap-8 @[864px]:flex-row">
 							{% include hero.html %}
-							<div
-								class="flex flex-col gap-6 @[480px]:min-w-[400px] @[480px]:gap-8 @[864px]:justify-center">
+							<div class="flex flex-col gap-6 @[480px]:min-w-[400px] @[480px]:gap-8 @[864px]:justify-center">
 								<div class="flex flex-col gap-2 text-left">
-									<h1
-										class="mb-16 text-[#0d141b] text-3xl @[480px]:text-4xl @[864px]:text-5xl font-black leading-tight tracking-[-0.033em]">
+									<span class="text-[#22d3ee] text-sm font-mono tracking-widest uppercase mb-1">// whoami</span>
+									<h1 class="text-[#f1f5f9] text-3xl @[480px]:text-4xl @[864px]:text-5xl font-black leading-tight tracking-[-0.033em]">
 										{{ t.about_title }}
 									</h1>
-									<h2
-										class="text-[#0d141b] text-base @[480px]:text-lg font-normal leading-normal">
+									<p class="text-[#94a3b8] text-base @[480px]:text-lg font-normal leading-normal mt-2">
 										{{ t.about_subtitle }}
-									</h2>
+									</p>
 								</div>
 							</div>
 						</div>
 					</div>
-					<!-- Professional Journey Section -->
-					<section class="px-4 py-16 @[480px]:px-10 @[480px]:py-20 bg-white">
-						<h2
-							class="text-[#0d141b] text-[28px] @[480px]:text-4xl font-bold leading-tight tracking-[-0.015em]">
-							{{ t.professional_journey_title }}</h2>
-						<ul class="list-none pl-0 mt-6 @[480px]:mt-8 space-y-4">
-							<li class="flex items-start gap-4">
-								<span class="font-bold w-28 shrink-0">2024–2025:</span>
-								<span class="flex-1 text-[#4c719a] text-base @[480px]:text-lg">{{ t.professional_journey_item1_text }}</span>
-							</li>
-							<li class="flex items-start gap-4">
-								<span class="font-bold w-28 shrink-0">2023-2024:</span>
-								<span class="flex-1 text-[#4c719a] text-base @[480px]:text-lg">{{ t.professional_journey_item2_text }}</span>
-							</li>
-							<li class="flex items-start gap-4">
-								<span class="font-bold w-28 shrink-0">2022–2023:</span>
-								<span class="flex-1 text-[#4c719a] text-base @[480px]:text-lg">{{ t.professional_journey_item3_text }}</span>
-							</li>
-							<li class="flex items-start gap-4">
-								<span class="font-bold w-28 shrink-0">2020–2021:</span>
-								<span class="flex-1 text-[#4c719a] text-base @[480px]:text-lg">{{ t.professional_journey_item4_text }}</span>
-							</li>
-							<li class="flex items-start gap-4">
-								<span class="font-bold w-28 shrink-0">2016–2020:</span>
-								<span class="flex-1 text-[#4c719a] text-base @[480px]:text-lg">{{ t.professional_journey_item5_text }}</span>
-							</li>
-						</ul>
+
+					<!-- Professional Journey -->
+					<section class="px-4 py-10 border-t border-[#1e3a5f]">
+						<h2 class="text-[#22d3ee] text-[24px] @[480px]:text-3xl font-bold leading-tight tracking-[-0.015em] mb-8">
+							{{ t.professional_journey_title }}
+						</h2>
+						<div class="space-y-0">
+							<div class="flex items-start gap-4 pb-8 relative">
+								<div class="flex flex-col items-center">
+									<div class="w-3 h-3 rounded-full bg-[#22d3ee] border-2 border-[#22d3ee] mt-1 shrink-0"></div>
+									<div class="w-px flex-1 bg-[#1e3a5f] mt-1"></div>
+								</div>
+								<span class="flex-1 text-[#94a3b8] text-base @[480px]:text-lg leading-relaxed">{{ t.professional_journey_item1_text }}</span>
+							</div>
+							<div class="flex items-start gap-4 pb-8 relative">
+								<div class="flex flex-col items-center">
+									<div class="w-3 h-3 rounded-full bg-[#22d3ee] border-2 border-[#22d3ee] mt-1 shrink-0"></div>
+									<div class="w-px flex-1 bg-[#1e3a5f] mt-1"></div>
+								</div>
+								<span class="flex-1 text-[#94a3b8] text-base @[480px]:text-lg leading-relaxed">{{ t.professional_journey_item2_text }}</span>
+							</div>
+							<div class="flex items-start gap-4 pb-8 relative">
+								<div class="flex flex-col items-center">
+									<div class="w-3 h-3 rounded-full bg-[#22d3ee] border-2 border-[#22d3ee] mt-1 shrink-0"></div>
+									<div class="w-px flex-1 bg-[#1e3a5f] mt-1"></div>
+								</div>
+								<span class="flex-1 text-[#94a3b8] text-base @[480px]:text-lg leading-relaxed">{{ t.professional_journey_item3_text }}</span>
+							</div>
+							<div class="flex items-start gap-4 pb-8 relative">
+								<div class="flex flex-col items-center">
+									<div class="w-3 h-3 rounded-full bg-[#22d3ee] border-2 border-[#22d3ee] mt-1 shrink-0"></div>
+									<div class="w-px flex-1 bg-[#1e3a5f] mt-1"></div>
+								</div>
+								<span class="flex-1 text-[#94a3b8] text-base @[480px]:text-lg leading-relaxed">{{ t.professional_journey_item4_text }}</span>
+							</div>
+							<div class="flex items-start gap-4">
+								<div class="flex flex-col items-center">
+									<div class="w-3 h-3 rounded-full bg-[#4ade80] border-2 border-[#4ade80] mt-1 shrink-0"></div>
+								</div>
+								<span class="flex-1 text-[#94a3b8] text-base @[480px]:text-lg leading-relaxed">{{ t.professional_journey_item5_text }}</span>
+							</div>
+						</div>
 					</section>
 
-					<!-- My Approach Section -->
-					<section class="px-4 py-10">
-						<h2
-							class="text-[#0d141b] text-[28px] @[480px]:text-4xl font-bold leading-tight tracking-[-0.015em]">
-							{{ t.my_approach_title }}</h2>
-						<p class="text-[#4c719a] text-base @[480px]:text-lg mt-4 leading-relaxed">
-							{{ t.my_approach_p1 }}
-						</p>
-						<p class="text-[#4c719a] text-base @[480px]:text-lg mt-2 leading-relaxed">
-							{{ t.my_approach_p2 }}
-						</p>
+					<!-- My Approach -->
+					<section class="px-4 py-10 border-t border-[#1e3a5f]">
+						<h2 class="text-[#22d3ee] text-[24px] @[480px]:text-3xl font-bold leading-tight tracking-[-0.015em] mb-6">
+							{{ t.my_approach_title }}
+						</h2>
+						<div class="bg-[#111827] border border-[#1e3a5f] rounded-xl p-6 space-y-4">
+							<p class="text-[#94a3b8] text-base @[480px]:text-lg leading-relaxed">
+								{{ t.my_approach_p1 }}
+							</p>
+							<p class="text-[#94a3b8] text-base @[480px]:text-lg leading-relaxed">
+								{{ t.my_approach_p2 }}
+							</p>
+						</div>
 					</section>
+
+					<!-- Certifications Section -->
+					<section class="px-4 py-10 border-t border-[#1e3a5f]">
+						<h2 class="text-[#22d3ee] text-[24px] @[480px]:text-3xl font-bold leading-tight tracking-[-0.015em] mb-6">
+							{{ t.certifications_title }}
+						</h2>
+						<div class="bg-[#0f172a] border border-[#22d3ee]/40 rounded-xl p-5 flex items-start gap-4 relative overflow-hidden max-w-xl">
+							<div class="absolute top-0 left-0 right-0 h-px bg-[#22d3ee]/40"></div>
+							<div class="p-2 rounded-lg bg-[#22d3ee]/10 text-[#22d3ee] shrink-0">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="none" viewBox="0 0 24 24">
+									<path d="M12 2L3 7V12C3 16.55 6.84 20.74 12 22C17.16 20.74 21 16.55 21 12V7L12 2Z" stroke="#22d3ee" stroke-width="1.5" stroke-linejoin="round"/>
+									<path d="M9 12L11 14L15 10" stroke="#22d3ee" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+								</svg>
+							</div>
+							<div class="flex-1 min-w-0">
+								<div class="flex flex-wrap items-center gap-2 mb-1">
+									<p class="text-[#f1f5f9] font-bold text-base">{{ t.cert1_name }}</p>
+									<span class="inline-flex items-center rounded-full bg-[#22d3ee]/10 border border-[#22d3ee]/30 px-2 py-0.5 text-xs font-medium text-[#22d3ee]">CWES</span>
+								</div>
+								<p class="text-[#94a3b8] text-sm">{{ t.cert1_issuer }} &middot; {{ t.cert1_date }}</p>
+								<p class="text-[#64748b] text-xs font-mono mt-1">{{ t.cert1_id }}</p>
+							</div>
+						</div>
+					</section>
+
+					<!-- Tools & Technologies -->
+					<section class="px-4 py-10 border-t border-[#1e3a5f]">
+						<h2 class="text-[#22d3ee] text-[24px] @[480px]:text-3xl font-bold leading-tight tracking-[-0.015em] mb-6">
+							{{ t.tools_title }}
+						</h2>
+						<div class="flex flex-wrap gap-2">
+							{% assign tools = "Burp Suite,nmap,gobuster,ffuf,sqlmap,WPScan,OWASP ZAP,Metasploit,Sliver,BloodHound,Mimikatz,Prowler,ScoutSuite,Pacu,AWS,Azure,GCP,Docker,Linux,Bash,Python" | split: "," %}
+							{% for tool in tools %}
+							<span class="inline-flex items-center rounded-md bg-[#111827] border border-[#1e3a5f] px-3 py-1 text-xs font-mono text-[#94a3b8] hover:border-[#22d3ee]/50 hover:text-[#22d3ee] transition-colors">{{ tool }}</span>
+							{% endfor %}
+						</div>
+					</section>
+
 					{% include areas_of_expertise.html %}
 					{% include selected_projects.html %}
 					{% include cta.html %}

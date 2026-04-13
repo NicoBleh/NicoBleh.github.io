@@ -1,1 +1,47 @@
 @import "tailwindcss";
+
+/* ─── Dark/Tech Theme ─────────────────────────────── */
+:root {
+  --bg-primary:   #0a0f1a;
+  --bg-secondary: #0f172a;
+  --bg-card:      #111827;
+  --border-color: #1e3a5f;
+  --accent-cyan:  #22d3ee;
+  --accent-green: #4ade80;
+  --text-primary: #f1f5f9;
+  --text-muted:   #94a3b8;
+}
+
+/* Scanline / subtle grid texture overlay on the hero section */
+.hero-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(34,211,238,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34,211,238,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+/* Glowing accent line at the top of the nav */
+.nav-accent {
+  border-top: 2px solid var(--accent-cyan);
+}
+
+/* Terminal-style blinking cursor for hero title */
+.cursor-blink::after {
+  content: "_";
+  animation: blink 1s step-start infinite;
+  color: var(--accent-cyan);
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* Card hover glow */
+.card-glow:hover {
+  box-shadow: 0 0 20px rgba(34,211,238,0.15);
+  border-color: var(--accent-cyan) !important;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}

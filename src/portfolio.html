@@ -9,12 +9,14 @@ lang: de
   {% include posthog.html %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio | Nico Bleh</title>
+  <title>Portfolio | Nico Bleh – Ethical Hacker & Cybersecurity Consultant</title>
+  <meta name="description" content="Ausgewählte Cybersecurity-Projekte von Nico Bleh: Penetration Tests, Red Team Assessments, Cloud Security Audits.">
   <link rel="stylesheet" href="/styles/fonts.css" />
   <link href="/styles/output.css" rel="stylesheet" />
 </head>
-<body class="bg-slate-50 font-inter">
-  <div class="relative flex @[480px]:min-h-screen flex-col overflow-x-hidden">
+<body class="bg-[#0a0f1a]">
+  <div class="relative flex @[480px]:min-h-screen flex-col overflow-x-hidden bg-[#0a0f1a]"
+       style='font-family: Inter, "Noto Sans", sans-serif;'>
     <div class="layout-container flex h-full grow flex-col">
 
       {% include nav.html %}
@@ -22,104 +24,103 @@ lang: de
       <div class="px-4 @[480px]:px-40 flex flex-1 justify-center py-5">
         <div class="layout-content-container flex flex-col w-full max-w-[960px] flex-1">
           <div class="@container">
+
             <!-- Hero -->
             <div class="flex w-full flex-col gap-6 px-4 py-10 @[480px]:gap-8 @[864px]:flex-row">
               {% include hero.html %}
               <div class="flex flex-col gap-6 @[480px]:min-w-[400px] @[480px]:gap-8 @[864px]:justify-center">
-                <h1 class="mb-16 text-[#0d141b] text-3xl @[480px]:text-4xl @[864px]:text-5xl font-black leading-tight tracking-[-0.033em]">
-                  {{ t.portfolio_title }}
-                </h1>
-                <h2 class="text-[#0d141b] text-base @[480px]:text-lg font-normal leading-normal">
-                  {{ t.portfolio_intro }}
-                </h2>
+                <div class="flex flex-col gap-2 text-left">
+                  <span class="text-[#22d3ee] text-sm font-mono tracking-widest uppercase mb-1">// Case Studies</span>
+                  <h1 class="text-[#f1f5f9] text-3xl @[480px]:text-4xl @[864px]:text-5xl font-black leading-tight tracking-[-0.033em]">
+                    {{ t.portfolio_title }}
+                  </h1>
+                  <p class="text-[#94a3b8] text-base @[480px]:text-lg font-normal leading-normal mt-2">
+                    {{ t.portfolio_intro }}
+                  </p>
+                </div>
               </div>
             </div>
 
-            <h2 class="text-[#0d141b] text-[28px] @[480px]:text-4xl font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+            <!-- Projects -->
+            <h2 class="text-[#22d3ee] text-[24px] @[480px]:text-3xl font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 border-t border-[#1e3a5f]">
               {{ t.projects_title }}
             </h2>
-            <div class="flex flex-wrap justify-center p-4 gap-3">
-              <div class="flex h-full flex-col gap-4 rounded-lg w-full @[480px]:flex-1 @[480px]:min-w-60">
-                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style="background-image: url('/images/saas.png');"></div>
-                <div>
-                  <p class="text-[#0d141b] text-base font-medium leading-normal">{{ t.project1_title }}</p>
-                  <p class="text-[#4c719a] text-sm font-normal leading-normal">{{ t.project1_desc }}</p>
-                  <ul class="list-disc list-outside pl-6 text-[#4c719a] text-sm space-y-1 mt-2">
+            <div class="flex flex-col gap-6 p-4">
+
+              <!-- Project 1 -->
+              <div class="bg-[#111827] border border-[#1e3a5f] rounded-xl p-6 card-glow">
+                <div class="flex flex-wrap items-center gap-2 mb-3">
+                  <span class="inline-flex items-center rounded-full bg-[#22d3ee]/10 border border-[#22d3ee]/30 px-2 py-0.5 text-xs font-medium text-[#22d3ee]">Pentest</span>
+                  <span class="inline-flex items-center rounded-full bg-[#dc2626]/10 border border-[#dc2626]/30 px-2 py-0.5 text-xs font-medium text-[#f87171]">OWASP Top 10</span>
+                  <span class="inline-flex items-center rounded-full bg-[#f59e0b]/10 border border-[#f59e0b]/30 px-2 py-0.5 text-xs font-medium text-[#fbbf24]">FinTech</span>
+                </div>
+                <h3 class="text-[#f1f5f9] text-lg font-bold mb-1">{{ t.project1_title }}</h3>
+                <p class="text-[#94a3b8] text-sm leading-relaxed mb-4">{{ t.project1_desc }}</p>
+                <div class="border-t border-[#1e3a5f] pt-4">
+                  <p class="text-[#22d3ee] text-xs font-mono uppercase tracking-widest mb-2">Ergebnisse</p>
+                  <ul class="space-y-1">
                     {% for item in t.project1_outcomes %}
-                      <li>{{ item }}</li>
+                    <li class="flex items-start gap-2 text-[#94a3b8] text-sm">
+                      <span class="text-[#4ade80] shrink-0">▸</span>{{ item }}
+                    </li>
                     {% endfor %}
                   </ul>
-                  <p class="text-[#4c719a] text-sm font-normal leading-normal mt-2">{{ t.project1_tech }}</p>
+                </div>
+                <div class="border-t border-[#1e3a5f] mt-4 pt-4">
+                  <p class="text-[#64748b] text-xs font-mono">{{ t.project1_tech }}</p>
                 </div>
               </div>
-              <div class="flex h-full flex-col gap-4 rounded-lg w-full @[480px]:flex-1 @[480px]:min-w-60">
-                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style="background-image: url('/images/infrastructure.png');"></div>
-                <div>
-                  <p class="text-[#0d141b] text-base font-medium leading-normal">{{ t.project2_title }}</p>
-                  <p class="text-[#4c719a] text-sm font-normal leading-normal">{{ t.project2_desc }}</p>
-                  <ul class="list-disc list-outside pl-6 text-[#4c719a] text-sm space-y-1 mt-2">
+
+              <!-- Project 2 -->
+              <div class="bg-[#111827] border border-[#1e3a5f] rounded-xl p-6 card-glow">
+                <div class="flex flex-wrap items-center gap-2 mb-3">
+                  <span class="inline-flex items-center rounded-full bg-[#dc2626]/10 border border-[#dc2626]/30 px-2 py-0.5 text-xs font-medium text-[#f87171]">Red Team</span>
+                  <span class="inline-flex items-center rounded-full bg-[#f59e0b]/10 border border-[#f59e0b]/30 px-2 py-0.5 text-xs font-medium text-[#fbbf24]">APT Simulation</span>
+                  <span class="inline-flex items-center rounded-full bg-[#22d3ee]/10 border border-[#22d3ee]/30 px-2 py-0.5 text-xs font-medium text-[#22d3ee]">Enterprise</span>
+                </div>
+                <h3 class="text-[#f1f5f9] text-lg font-bold mb-1">{{ t.project2_title }}</h3>
+                <p class="text-[#94a3b8] text-sm leading-relaxed mb-4">{{ t.project2_desc }}</p>
+                <div class="border-t border-[#1e3a5f] pt-4">
+                  <p class="text-[#22d3ee] text-xs font-mono uppercase tracking-widest mb-2">Ergebnisse</p>
+                  <ul class="space-y-1">
                     {% for item in t.project2_outcomes %}
-                      <li>{{ item }}</li>
+                    <li class="flex items-start gap-2 text-[#94a3b8] text-sm">
+                      <span class="text-[#f87171] shrink-0">▸</span>{{ item }}
+                    </li>
                     {% endfor %}
                   </ul>
-                  <p class="text-[#4c719a] text-sm font-normal leading-normal mt-2">{{ t.project2_tech }}</p>
+                </div>
+                <div class="border-t border-[#1e3a5f] mt-4 pt-4">
+                  <p class="text-[#64748b] text-xs font-mono">{{ t.project2_tech }}</p>
                 </div>
               </div>
-              <div class="flex h-full flex-col gap-4 rounded-lg w-full @[480px]:flex-1 @[480px]:min-w-60">
-                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style="background-image: url('/images/wordpress.png');"></div>
-                <div>
-                  <p class="text-[#0d141b] text-base font-medium leading-normal">{{ t.project3_title }}</p>
-                  <p class="text-[#4c719a] text-sm font-normal leading-normal">{{ t.project3_desc }}</p>
-                  <ul class="list-disc list-outside pl-6 text-[#4c719a] text-sm space-y-1 mt-2">
+
+              <!-- Project 3 -->
+              <div class="bg-[#111827] border border-[#1e3a5f] rounded-xl p-6 card-glow">
+                <div class="flex flex-wrap items-center gap-2 mb-3">
+                  <span class="inline-flex items-center rounded-full bg-[#22d3ee]/10 border border-[#22d3ee]/30 px-2 py-0.5 text-xs font-medium text-[#22d3ee]">Cloud Security</span>
+                  <span class="inline-flex items-center rounded-full bg-[#4ade80]/10 border border-[#4ade80]/30 px-2 py-0.5 text-xs font-medium text-[#4ade80]">AWS</span>
+                  <span class="inline-flex items-center rounded-full bg-[#f59e0b]/10 border border-[#f59e0b]/30 px-2 py-0.5 text-xs font-medium text-[#fbbf24]">IAM Audit</span>
+                </div>
+                <h3 class="text-[#f1f5f9] text-lg font-bold mb-1">{{ t.project3_title }}</h3>
+                <p class="text-[#94a3b8] text-sm leading-relaxed mb-4">{{ t.project3_desc }}</p>
+                <div class="border-t border-[#1e3a5f] pt-4">
+                  <p class="text-[#22d3ee] text-xs font-mono uppercase tracking-widest mb-2">Ergebnisse</p>
+                  <ul class="space-y-1">
                     {% for item in t.project3_outcomes %}
-                      <li>{{ item }}</li>
+                    <li class="flex items-start gap-2 text-[#94a3b8] text-sm">
+                      <span class="text-[#4ade80] shrink-0">▸</span>{{ item }}
+                    </li>
                     {% endfor %}
                   </ul>
-                  <p class="text-[#4c719a] text-sm font-normal leading-normal mt-2">{{ t.project3_tech }}</p>
+                </div>
+                <div class="border-t border-[#1e3a5f] mt-4 pt-4">
+                  <p class="text-[#64748b] text-xs font-mono">{{ t.project3_tech }}</p>
                 </div>
               </div>
-              <div class="flex h-full flex-col gap-4 rounded-lg w-full @[480px]:flex-1 @[480px]:min-w-60">
-                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style="background-image: url('/images/merchant.png');"></div>
-                <div>
-                  <p class="text-[#0d141b] text-base font-medium leading-normal">{{ t.project4_title }}</p>
-                  <p class="text-[#4c719a] text-sm font-normal leading-normal">{{ t.project4_desc }}</p>
-                  <ul class="list-disc list-outside pl-6 text-[#4c719a] text-sm space-y-1 mt-2">
-                    {% for item in t.project4_outcomes %}
-                      <li>{{ item }}</li>
-                    {% endfor %}
-                  </ul>
-                  <p class="text-[#4c719a] text-sm font-normal leading-normal mt-2">{{ t.project4_tech }}</p>
-                </div>
-              </div>
-              <div class="flex h-full flex-col gap-4 rounded-lg w-full @[480px]:flex-1 @[480px]:min-w-60">
-                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style="background-image: url('/images/ipo.png');"></div>
-                <div>
-                  <p class="text-[#0d141b] text-base font-medium leading-normal">{{ t.project5_title }}</p>
-                  <p class="text-[#4c719a] text-sm font-normal leading-normal">{{ t.project5_desc }}</p>
-                  <ul class="list-disc list-outside pl-6 text-[#4c719a] text-sm space-y-1 mt-2">
-                    {% for item in t.project5_outcomes %}
-                      <li>{{ item }}</li>
-                    {% endfor %}
-                  </ul>
-                  <p class="text-[#4c719a] text-sm font-normal leading-normal mt-2">{{ t.project5_tech }}</p>
-                </div>
-              </div>
-              <div class="flex h-full flex-col gap-4 rounded-lg w-full @[480px]:flex-1 @[480px]:min-w-60">
-                <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style="background-image: url('/images/web.png');"></div>
-                <div>
-                  <p class="text-[#0d141b] text-base font-medium leading-normal">{{ t.project6_title }}</p>
-                  <p class="text-[#4c719a] text-sm font-normal leading-normal">{{ t.project6_desc }}</p>
-                  <ul class="list-disc list-outside pl-6 text-[#4c719a] text-sm space-y-1 mt-2">
-                    {% for item in t.project6_outcomes %}
-                      <li>{{ item }}</li>
-                    {% endfor %}
-                  </ul>
-                  <p class="text-[#4c719a] text-sm font-normal leading-normal mt-2">{{ t.project6_tech }}</p>
-                </div>
-              </div>
+
             </div>
 
-            <!-- Call to Action -->
             {% include cta.html %}
           </div>
         </div>
