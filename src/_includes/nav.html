@@ -10,10 +10,5 @@
     <a href="{{ page.lang == 'en' ? '/en/portfolio' : '/portfolio' }}" style="color:var(--muted);font-family:Inter,sans-serif;font-size:14px;font-weight:500;text-decoration:none;">{{ t.nav_portfolio }}</a>
     <a href="{{ page.lang == 'en' ? '/en/blog' : '/blog' }}" style="color:var(--muted);font-family:Inter,sans-serif;font-size:14px;font-weight:500;text-decoration:none;">{{ t.nav_blog }}</a>
     <a href="{{ page.lang == 'en' ? '/en/contact' : '/contact' }}" style="color:var(--muted);font-family:Inter,sans-serif;font-size:14px;font-weight:500;text-decoration:none;">{{ t.nav_contact }}</a>
-    <span style="color:var(--dim);font-family:'JetBrains Mono',monospace;font-size:12px;">
-      {% if page.lang == 'en' %}<a href="/" style="color:var(--muted);text-decoration:none;">DE</a> / <span style="color:var(--text);">EN</span>
-      {% else %}<span style="color:var(--text);">DE</span> / <a href="/en/" style="color:var(--muted);text-decoration:none;">EN</a>
-      {% endif %}
-    </span>
   </nav>
 </header>
