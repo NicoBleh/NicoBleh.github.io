@@ -4,35 +4,39 @@ lang: en
 {% assign t = site.data.translations[page.lang] %}
 
 <!DOCTYPE html>
-<html lang="{{ page.lang }}">
+<html lang="en">
 <head>
   {% include posthog.html %}
   <meta charset="utf-8">
-  <title>{{ t.nav_impressum }} | Nico Bleh</title>
-  <link rel="stylesheet" href="/styles/fonts.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ t.nav_impressum }} — Nico Bleh</title>
   <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
-  <link href="/styles/output.css" rel="stylesheet">
-  <meta name="viewport" content="width=device-width">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/fonts.css">
+  <link rel="stylesheet" href="/styles/output.css">
 </head>
-<body class="bg-[#0a0f1a]" style='font-family: Inter, "Noto Sans", sans-serif;'>
+<body style="margin:0;background:var(--bg);color:var(--text);">
   {% include nav.html %}
 
-  <main class="px-4 py-10 max-w-[960px] mx-auto text-[#94a3b8]">
-    <h1 class="text-3xl font-bold mb-8 text-[#f1f5f9]">{{ t.nav_impressum }}</h1>
+  <main style="padding:80px 40px 96px;max-width:760px;margin:0 auto;">
+    <div class="kicker" style="margin-bottom:16px;">// imprint</div>
+    <h1 style="font-family:'Space Grotesk',Inter,sans-serif;font-size:40px;font-weight:600;letter-spacing:-1px;color:var(--text);margin:0 0 48px;">{{ t.nav_impressum }}</h1>
 
-    <section class="bg-[#111827] border border-[#1e3a5f] rounded-xl p-6 mb-6">
-      <p class="text-[#22d3ee] text-xs font-mono uppercase tracking-widest mb-3">{{ t.imprint_responsible_title }}</p>
-      <p class="text-[#f1f5f9] font-semibold">Nico Bleh</p>
-      <p>Westhofener Str. 7</p>
-      <p>67596 Dittelsheim-Heßloch</p>
-      <p>Germany</p>
-    </section>
+    <div style="padding:24px 28px;background:var(--bg-surface);border:1px solid var(--border);border-radius:4px;margin-bottom:20px;">
+      <div class="kicker" style="margin-bottom:12px;">{{ t.imprint_responsible_title }}</div>
+      <p style="font-family:Inter,sans-serif;font-size:15px;color:var(--text);font-weight:600;margin:0 0 4px;">Nico Bleh</p>
+      <p style="font-family:Inter,sans-serif;font-size:15px;color:var(--text-dim);margin:0;line-height:1.7;">Westhofener Str. 7<br>67596 Dittelsheim-Heßloch<br>Germany</p>
+    </div>
 
-    <section class="bg-[#111827] border border-[#1e3a5f] rounded-xl p-6 mb-6">
-      <p class="text-[#22d3ee] text-xs font-mono uppercase tracking-widest mb-3">{{ t.imprint_contact_title }}</p>
-      <p>{{ t.imprint_email_label }} <a href="mailto:nico@nicobleh.com" class="text-[#22d3ee] hover:underline">nico@nicobleh.com</a></p>
-      <p>{{ t.imprint_phone_label }} +49 176 42048043</p>
-    </section>
+    <div style="padding:24px 28px;background:var(--bg-surface);border:1px solid var(--border);border-radius:4px;">
+      <div class="kicker" style="margin-bottom:12px;">{{ t.imprint_contact_title }}</div>
+      <p style="font-family:Inter,sans-serif;font-size:15px;color:var(--text-dim);margin:0;line-height:1.7;">
+        {{ t.imprint_email_label }} <a href="mailto:nicobleh@gmail.com" style="color:var(--accent);text-decoration:none;">nicobleh@gmail.com</a><br>
+        {{ t.imprint_phone_label }} +49 176 42048043
+      </p>
+    </div>
   </main>
 
   {% include footer.html %}

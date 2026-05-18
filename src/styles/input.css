@@ -1,47 +1,130 @@
 @import "tailwindcss";
 
-/* ─── Dark/Tech Theme ─────────────────────────────── */
+/* ─── Design Tokens — AI Security Engineer Brand ───── */
 :root {
-  --bg-primary:   #0a0f1a;
-  --bg-secondary: #0f172a;
-  --bg-card:      #111827;
-  --border-color: #1e3a5f;
-  --accent-cyan:  #22d3ee;
-  --accent-green: #4ade80;
-  --text-primary: #f1f5f9;
-  --text-muted:   #94a3b8;
+  --bg:          #0D1B2A;
+  --bg-surface:  #11243a;
+  --bg-card:     #142a44;
+  --border:      #1d3a5c;
+  --border-hi:   #2a4f7a;
+  --text:        #F5F5F7;
+  --text-dim:    #cbd5e1;
+  --muted:       #94A3B8;
+  --dim:         #64748B;
+  --accent:      #00D4FF;
+  --accent-dim:  #0891a8;
+  --ok:          #4ade80;
+  --warn:        #e05c4b;
 }
 
-/* Scanline / subtle grid texture overlay on the hero section */
-.hero-grid::before {
-  content: "";
+/* ─── Fonts ─────────────────────────────────────────── */
+/* Space Grotesk loaded via <link> in HTML */
+/* JetBrains Mono loaded via <link> in HTML */
+
+/* ─── Base ───────────────────────────────────────────── */
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, sans-serif;
+}
+
+/* ─── Constellation hero backdrop ───────────────────── */
+.hero-backdrop {
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(rgba(34,211,238,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(34,211,238,0.03) 1px, transparent 1px);
-  background-size: 40px 40px;
+  background-image: radial-gradient(var(--border-hi) 1px, transparent 1px);
+  background-size: 32px 32px;
+  -webkit-mask-image: radial-gradient(ellipse at 70% 35%, black 0%, transparent 75%);
+  mask-image: radial-gradient(ellipse at 70% 35%, black 0%, transparent 75%);
   pointer-events: none;
 }
 
-/* Glowing accent line at the top of the nav */
-.nav-accent {
-  border-top: 2px solid var(--accent-cyan);
+/* ─── Card hover ─────────────────────────────────────── */
+.card-hover {
+  transition: border-color 0.2s ease;
+}
+.card-hover:hover {
+  border-color: var(--accent) !important;
 }
 
-/* Terminal-style blinking cursor for hero title */
-.cursor-blink::after {
-  content: "_";
-  animation: blink 1s step-start infinite;
-  color: var(--accent-cyan);
-}
-@keyframes blink {
-  50% { opacity: 0; }
+/* ─── Pill / tag ─────────────────────────────────────── */
+.tag {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 11px;
+  color: var(--muted);
+  padding: 3px 8px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  letter-spacing: 0.5px;
+  display: inline-block;
 }
 
-/* Card hover glow */
+/* ─── Section kicker ─────────────────────────────────── */
+.kicker {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 11px;
+  color: var(--accent);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* ─── Status pill (green dot) ────────────────────────── */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  background: color-mix(in srgb, var(--bg-surface) 80%, transparent);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+.status-dot {
+  display: inline-block;
+  width: 6px; height: 6px;
+  border-radius: 3px;
+  background: var(--ok);
+  box-shadow: 0 0 8px color-mix(in srgb, var(--ok) 67%, transparent);
+}
+
+/* ─── Portrait pill ──────────────────────────────────── */
+.portrait-pill {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 14px 28px 14px 14px;
+  background: color-mix(in srgb, var(--bg-surface) 80%, transparent);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+.portrait-img {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center 20%;
+  border: 1px solid var(--border-hi);
+  flex-shrink: 0;
+}
+
+/* ─── Post card ──────────────────────────────────────── */
+.post-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: border-color 0.2s;
+}
+.post-card:hover { border-color: var(--accent); }
+
+/* ─── Legacy — keep card-glow for any remaining old pages */
 .card-glow:hover {
-  box-shadow: 0 0 20px rgba(34,211,238,0.15);
-  border-color: var(--accent-cyan) !important;
+  box-shadow: 0 0 20px rgba(0,212,255,0.12);
+  border-color: var(--accent) !important;
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }

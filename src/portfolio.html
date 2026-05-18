@@ -2,132 +2,140 @@
 lang: de
 ---
 {% assign t = site.data.translations[page.lang] %}
-
 <!DOCTYPE html>
-<html lang="{{ page.lang }}">
+<html lang="de">
 <head>
   {% include posthog.html %}
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio | Nico Bleh | Ethical Hacker & Cybersecurity Consultant</title>
-  <meta name="description" content="Ausgewählte Cybersecurity-Projekte von Nico Bleh: Penetration Tests, Red Team Assessments, Cloud Security Audits.">
-  <link rel="stylesheet" href="/styles/fonts.css" />
-  <link href="/styles/output.css" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio — Nico Bleh</title>
+  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/fonts.css">
+  <link rel="stylesheet" href="/styles/output.css">
 </head>
-<body class="bg-[#0a0f1a]">
-  <div class="relative flex @[480px]:min-h-screen flex-col overflow-x-hidden bg-[#0a0f1a]"
-       style='font-family: Inter, "Noto Sans", sans-serif;'>
-    <div class="layout-container flex h-full grow flex-col">
+<body style="margin:0;background:var(--bg);color:var(--text);">
+{% include nav.html %}
 
-      {% include nav.html %}
+<section style="padding:80px 40px 48px;max-width:1100px;margin:0 auto;">
+  <div class="kicker" style="margin-bottom:16px;">// portfolio</div>
+  <h1 style="font-family:'Space Grotesk',Inter,sans-serif;font-size:clamp(40px,5vw,64px);font-weight:600;letter-spacing:-0.04em;line-height:0.98;margin:0;">Was ich gebaut habe.</h1>
+  <p style="font-family:Inter,sans-serif;font-size:17px;color:var(--text-dim);line-height:1.6;margin:24px 0 0;max-width:660px;">
+    Eine Auswahl aktueller und vergangener Arbeit. Vertraulichkeitsbedingt werden Details nur insoweit beschrieben, wie öffentlich oder mit Zustimmung freigegeben.
+  </p>
+</section>
 
-      <div class="px-4 @[480px]:px-40 flex flex-1 justify-center py-5">
-        <div class="layout-content-container flex flex-col w-full max-w-[960px] flex-1">
-          <div class="@container">
+<section style="padding:0 40px 96px;max-width:1100px;margin:0 auto;">
+  <div style="border-top:1px solid var(--border);">
 
-            <!-- Hero -->
-            <div class="flex w-full flex-col gap-6 px-4 py-10 @[480px]:gap-8 @[864px]:flex-row">
-              {% include hero.html %}
-              <div class="flex flex-col gap-6 @[480px]:min-w-[400px] @[480px]:gap-8 @[864px]:justify-center">
-                <div class="flex flex-col gap-2 text-left">
-                  <span class="text-[#22d3ee] text-sm font-mono tracking-widest uppercase mb-1">// Case Studies</span>
-                  <h1 class="text-[#f1f5f9] text-3xl @[480px]:text-4xl @[864px]:text-5xl font-black leading-tight tracking-[-0.033em]">
-                    {{ t.portfolio_title }}
-                  </h1>
-                  <p class="text-[#94a3b8] text-base @[480px]:text-lg font-normal leading-normal mt-2">
-                    {{ t.portfolio_intro }}
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Projects -->
-            <h2 class="text-[#22d3ee] text-[24px] @[480px]:text-3xl font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 border-t border-[#1e3a5f]">
-              {{ t.projects_title }}
-            </h2>
-            <div class="flex flex-col gap-6 p-4">
-
-              <!-- Project 1 -->
-              <div class="bg-[#111827] border border-[#1e3a5f] rounded-xl p-6 card-glow">
-                <div class="flex flex-wrap items-center gap-2 mb-3">
-                  <span class="inline-flex items-center rounded-full bg-[#22d3ee]/10 border border-[#22d3ee]/30 px-2 py-0.5 text-xs font-medium text-[#22d3ee]">Pentest</span>
-                  <span class="inline-flex items-center rounded-full bg-[#dc2626]/10 border border-[#dc2626]/30 px-2 py-0.5 text-xs font-medium text-[#f87171]">OWASP Top 10</span>
-                  <span class="inline-flex items-center rounded-full bg-[#f59e0b]/10 border border-[#f59e0b]/30 px-2 py-0.5 text-xs font-medium text-[#fbbf24]">FinTech</span>
-                </div>
-                <h3 class="text-[#f1f5f9] text-lg font-bold mb-1">{{ t.project1_title }}</h3>
-                <p class="text-[#94a3b8] text-sm leading-relaxed mb-4">{{ t.project1_desc }}</p>
-                <div class="border-t border-[#1e3a5f] pt-4">
-                  <p class="text-[#22d3ee] text-xs font-mono uppercase tracking-widest mb-2">Ergebnisse</p>
-                  <ul class="space-y-1">
-                    {% for item in t.project1_outcomes %}
-                    <li class="flex items-start gap-2 text-[#94a3b8] text-sm">
-                      <span class="text-[#4ade80] shrink-0">▸</span>{{ item }}
-                    </li>
-                    {% endfor %}
-                  </ul>
-                </div>
-                <div class="border-t border-[#1e3a5f] mt-4 pt-4">
-                  <p class="text-[#64748b] text-xs font-mono">{{ t.project1_tech }}</p>
-                </div>
-              </div>
-
-              <!-- Project 2 -->
-              <div class="bg-[#111827] border border-[#1e3a5f] rounded-xl p-6 card-glow">
-                <div class="flex flex-wrap items-center gap-2 mb-3">
-                  <span class="inline-flex items-center rounded-full bg-[#dc2626]/10 border border-[#dc2626]/30 px-2 py-0.5 text-xs font-medium text-[#f87171]">Red Team</span>
-                  <span class="inline-flex items-center rounded-full bg-[#f59e0b]/10 border border-[#f59e0b]/30 px-2 py-0.5 text-xs font-medium text-[#fbbf24]">APT Simulation</span>
-                  <span class="inline-flex items-center rounded-full bg-[#22d3ee]/10 border border-[#22d3ee]/30 px-2 py-0.5 text-xs font-medium text-[#22d3ee]">Enterprise</span>
-                </div>
-                <h3 class="text-[#f1f5f9] text-lg font-bold mb-1">{{ t.project2_title }}</h3>
-                <p class="text-[#94a3b8] text-sm leading-relaxed mb-4">{{ t.project2_desc }}</p>
-                <div class="border-t border-[#1e3a5f] pt-4">
-                  <p class="text-[#22d3ee] text-xs font-mono uppercase tracking-widest mb-2">Ergebnisse</p>
-                  <ul class="space-y-1">
-                    {% for item in t.project2_outcomes %}
-                    <li class="flex items-start gap-2 text-[#94a3b8] text-sm">
-                      <span class="text-[#f87171] shrink-0">▸</span>{{ item }}
-                    </li>
-                    {% endfor %}
-                  </ul>
-                </div>
-                <div class="border-t border-[#1e3a5f] mt-4 pt-4">
-                  <p class="text-[#64748b] text-xs font-mono">{{ t.project2_tech }}</p>
-                </div>
-              </div>
-
-              <!-- Project 3 -->
-              <div class="bg-[#111827] border border-[#1e3a5f] rounded-xl p-6 card-glow">
-                <div class="flex flex-wrap items-center gap-2 mb-3">
-                  <span class="inline-flex items-center rounded-full bg-[#22d3ee]/10 border border-[#22d3ee]/30 px-2 py-0.5 text-xs font-medium text-[#22d3ee]">Cloud Security</span>
-                  <span class="inline-flex items-center rounded-full bg-[#4ade80]/10 border border-[#4ade80]/30 px-2 py-0.5 text-xs font-medium text-[#4ade80]">AWS</span>
-                  <span class="inline-flex items-center rounded-full bg-[#f59e0b]/10 border border-[#f59e0b]/30 px-2 py-0.5 text-xs font-medium text-[#fbbf24]">IAM Audit</span>
-                </div>
-                <h3 class="text-[#f1f5f9] text-lg font-bold mb-1">{{ t.project3_title }}</h3>
-                <p class="text-[#94a3b8] text-sm leading-relaxed mb-4">{{ t.project3_desc }}</p>
-                <div class="border-t border-[#1e3a5f] pt-4">
-                  <p class="text-[#22d3ee] text-xs font-mono uppercase tracking-widest mb-2">Ergebnisse</p>
-                  <ul class="space-y-1">
-                    {% for item in t.project3_outcomes %}
-                    <li class="flex items-start gap-2 text-[#94a3b8] text-sm">
-                      <span class="text-[#4ade80] shrink-0">▸</span>{{ item }}
-                    </li>
-                    {% endfor %}
-                  </ul>
-                </div>
-                <div class="border-t border-[#1e3a5f] mt-4 pt-4">
-                  <p class="text-[#64748b] text-xs font-mono">{{ t.project3_tech }}</p>
-                </div>
-              </div>
-
-            </div>
-
-            {% include cta.html %}
-          </div>
+    <!-- Project 1: LinkedIn Series -->
+    <article style="padding:40px 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:60px 1fr 220px;gap:32px;align-items:start;">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent);letter-spacing:1px;font-weight:500;">01</span>
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;">Content Series · LinkedIn</span>
+        </div>
+        <h3 style="font-family:'Space Grotesk',Inter,sans-serif;font-size:26px;font-weight:600;letter-spacing:-0.7px;line-height:1.15;margin:0;">Cybersecurity &amp; AI — laufende Beitragsserie</h3>
+        <p style="font-family:Inter,sans-serif;font-size:15px;color:var(--text-dim);line-height:1.6;margin:14px 0 0;max-width:640px;">Wöchentliche Analysen zu Agentic AI Security, Indirect Prompt Injection, Multi-Agent Authorization, AI-Zero-Days und BaFin-Patch-Aufsicht.</p>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:16px;">
+          <span class="tag">LinkedIn</span><span class="tag">AI Security</span><span class="tag">Content</span><span class="tag">live</span>
         </div>
       </div>
+      <div style="padding-top:4px;">
+        <a href="https://linkedin.com/in/nicobleh" target="_blank" style="font-family:Inter,sans-serif;font-size:13px;color:var(--accent);font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:6px;">linkedin.com/in/nicobleh <span>↗</span></a>
+      </div>
+    </article>
 
-      {% include footer.html %}
-    </div>
+    <!-- Project 2: Opteinics -->
+    <article style="padding:40px 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:60px 1fr 220px;gap:32px;align-items:start;">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent);letter-spacing:1px;font-weight:500;">02</span>
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;">Production · BASF Venture</span>
+        </div>
+        <h3 style="font-family:'Space Grotesk',Inter,sans-serif;font-size:26px;font-weight:600;letter-spacing:-0.7px;line-height:1.15;margin:0;">Opteinics — produktive LLM-Features</h3>
+        <p style="font-family:Inter,sans-serif;font-size:15px;color:var(--text-dim);line-height:1.6;margin:14px 0 0;max-width:640px;">Architektur und Auslieferung produktiver LLM-Features für Enterprise-Kunden wie Evonik. Threat Modeling für Prompt Injection, Datenleckage und Modellmissbrauch als Architekturbestandteil. Knowledge-Graph-Backbone (Neo4j) mit Provenance, Audit-Trail, Pseudonymisierung.</p>
+        <p style="font-family:Inter,sans-serif;font-size:13px;color:var(--dim);line-height:1.55;margin:12px 0 0;font-style:italic;">Details soweit beschreibbar, wie öffentlich bekannt. Keine vertraulichen Kundeninformationen.</p>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:16px;">
+          <span class="tag">LLM in Production</span><span class="tag">Enterprise</span><span class="tag">Neo4j</span><span class="tag">Threat Modeling</span>
+        </div>
+      </div>
+      <div></div>
+    </article>
+
+    <!-- Project 3: Creditshelf -->
+    <article style="padding:40px 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:60px 1fr 220px;gap:32px;align-items:start;">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent);letter-spacing:1px;font-weight:500;">03</span>
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;">FinTech · BaFin · IPO</span>
+        </div>
+        <h3 style="font-family:'Space Grotesk',Inter,sans-serif;font-size:26px;font-weight:600;letter-spacing:-0.7px;line-height:1.15;margin:0;">Creditshelf — Fraud Detection mit Graph-DB + ML</h3>
+        <p style="font-family:Inter,sans-serif;font-size:15px;color:var(--text-dim);line-height:1.6;margin:14px 0 0;max-width:640px;">Iterativer PoC zur Identifikation zirkulärer Zahlungsströme im Kreditportfolio. Messbare Reduktion der Ausfallrisiken, dauerhafte Etablierung im Risikomanagement. BaFin-reguliertes Umfeld, IPO-Begleitung mit EY-Audit.</p>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:16px;">
+          <span class="tag">FinTech</span><span class="tag">Graph DB</span><span class="tag">ML</span><span class="tag">Regulated</span>
+        </div>
+      </div>
+      <div></div>
+    </article>
+
+    <!-- Project 4: HTB Path -->
+    <article style="padding:40px 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:60px 1fr 220px;gap:32px;align-items:start;">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent);letter-spacing:1px;font-weight:500;">04</span>
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;">Learning · 2026</span>
+        </div>
+        <h3 style="font-family:'Space Grotesk',Inter,sans-serif;font-size:26px;font-weight:600;letter-spacing:-0.7px;line-height:1.15;margin:0;">HTB AI Red Teamer Path</h3>
+        <p style="font-family:Inter,sans-serif;font-size:15px;color:var(--text-dim);line-height:1.6;margin:14px 0 0;max-width:640px;">Module „Fundamentals of AI" und „Application of AI in InfoSec" abgeschlossen. Nächste Module: Adversarial AI Attacks, Prompt Injection. Profil mit verifizierten Badges öffentlich einsehbar.</p>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:16px;">
+          <span class="tag">HackTheBox</span><span class="tag">Ongoing</span><span class="tag">AI Red Teaming</span>
+        </div>
+      </div>
+      <div style="padding-top:4px;">
+        <a href="https://app.hackthebox.com/profile" target="_blank" style="font-family:Inter,sans-serif;font-size:13px;color:var(--accent);font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:6px;">HTB Profil <span>↗</span></a>
+      </div>
+    </article>
+
+    <!-- Project 5: IOC-Extractor (soon) -->
+    <article style="padding:40px 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:60px 1fr 220px;gap:32px;align-items:start;opacity:0.65;">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--dim);letter-spacing:1px;font-weight:500;">05</span>
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;">Tool · open source soon</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--dim);padding:2px 8px;border:1px solid var(--border);border-radius:2px;letter-spacing:1px;text-transform:uppercase;">soon</span>
+        </div>
+        <h3 style="font-family:'Space Grotesk',Inter,sans-serif;font-size:26px;font-weight:600;letter-spacing:-0.7px;line-height:1.15;margin:0;">IOC-Extractor</h3>
+        <p style="font-family:Inter,sans-serif;font-size:15px;color:var(--text-dim);line-height:1.6;margin:14px 0 0;max-width:640px;">LLM-gestützte Extraktion strukturierter Indicators of Compromise aus unstrukturierten Threat-Intel-Reports. Code wird öffentlich, sobald sauber dokumentiert.</p>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:16px;">
+          <span class="tag">LLM</span><span class="tag">Threat Intel</span><span class="tag">in Arbeit</span>
+        </div>
+      </div>
+      <div></div>
+    </article>
+
+    <!-- Project 6: Phishing Classifier (soon) -->
+    <article style="padding:40px 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:60px 1fr 220px;gap:32px;align-items:start;opacity:0.65;">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--dim);letter-spacing:1px;font-weight:500;">06</span>
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;">Tool · open source soon</span>
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--dim);padding:2px 8px;border:1px solid var(--border);border-radius:2px;letter-spacing:1px;text-transform:uppercase;">soon</span>
+        </div>
+        <h3 style="font-family:'Space Grotesk',Inter,sans-serif;font-size:26px;font-weight:600;letter-spacing:-0.7px;line-height:1.15;margin:0;">Phishing-Klassifikator</h3>
+        <p style="font-family:Inter,sans-serif;font-size:15px;color:var(--text-dim);line-height:1.6;margin:14px 0 0;max-width:640px;">ML-basierte Klassifikation mit besonderem Fokus auf LLM-generierte Phishing-Varianten. Trainiert auf einem kuratierten Datensatz aus 2025–2026.</p>
+        <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:16px;">
+          <span class="tag">ML</span><span class="tag">Phishing</span><span class="tag">in Arbeit</span>
+        </div>
+      </div>
+      <div></div>
+    </article>
+
   </div>
+</section>
+
+{% include footer.html %}
 </body>
 </html>

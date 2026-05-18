@@ -1,0 +1,83 @@
+---
+lang: de
+---
+{% assign t = site.data.translations[page.lang] %}
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  {% include posthog.html %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kontakt — Nico Bleh</title>
+  <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/fonts.css">
+  <link rel="stylesheet" href="/styles/output.css">
+</head>
+<body style="margin:0;background:var(--bg);color:var(--text);">
+{% include nav.html %}
+
+<section style="padding:120px 40px 48px;max-width:760px;margin:0 auto;">
+  <div class="kicker" style="margin-bottom:16px;">// kontakt</div>
+  <h1 style="font-family:'Space Grotesk',Inter,sans-serif;font-size:clamp(48px,6vw,72px);font-weight:600;letter-spacing:-0.04em;line-height:0.98;margin:0;">Reden wir.</h1>
+  <p style="font-family:Inter,sans-serif;font-size:18px;color:var(--text-dim);line-height:1.6;margin:28px 0 0;max-width:580px;">
+    Ich antworte normalerweise innerhalb eines Werktags. Am direktesten per E-Mail oder LinkedIn.
+  </p>
+</section>
+
+<section style="padding:32px 40px 64px;max-width:760px;margin:0 auto;">
+  <div style="border-top:1px solid var(--border);">
+
+    <a href="mailto:nicobleh@gmail.com" style="padding:28px 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:120px 1fr 32px;gap:24px;align-items:center;text-decoration:none;">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--dim);letter-spacing:2px;text-transform:uppercase;">E-Mail</span>
+      <div>
+        <div style="font-family:'Space Grotesk',Inter,sans-serif;font-size:22px;font-weight:500;color:var(--text);letter-spacing:-0.5px;">nicobleh@gmail.com</div>
+        <div style="font-family:Inter,sans-serif;font-size:13px;color:var(--muted);margin-top:2px;">Direktester Weg</div>
+      </div>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:16px;color:var(--accent);text-align:right;">✉</span>
+    </a>
+
+    <a href="https://linkedin.com/in/nicobleh" target="_blank" style="padding:28px 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:120px 1fr 32px;gap:24px;align-items:center;text-decoration:none;">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--dim);letter-spacing:2px;text-transform:uppercase;">LinkedIn</span>
+      <div>
+        <div style="font-family:'Space Grotesk',Inter,sans-serif;font-size:22px;font-weight:500;color:var(--text);letter-spacing:-0.5px;">linkedin.com/in/nicobleh</div>
+        <div style="font-family:Inter,sans-serif;font-size:13px;color:var(--muted);margin-top:2px;">Updates und Beiträge</div>
+      </div>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:16px;color:var(--accent);text-align:right;">↗</span>
+    </a>
+
+    <a href="https://github.com/nicobleh" target="_blank" style="padding:28px 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:120px 1fr 32px;gap:24px;align-items:center;text-decoration:none;">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--dim);letter-spacing:2px;text-transform:uppercase;">GitHub</span>
+      <div>
+        <div style="font-family:'Space Grotesk',Inter,sans-serif;font-size:22px;font-weight:500;color:var(--text);letter-spacing:-0.5px;">github.com/nicobleh</div>
+        <div style="font-family:Inter,sans-serif;font-size:13px;color:var(--muted);margin-top:2px;">Code und Tooling</div>
+      </div>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:16px;color:var(--accent);text-align:right;">↗</span>
+    </a>
+
+    <a href="https://app.hackthebox.com/profile" target="_blank" style="padding:28px 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:120px 1fr 32px;gap:24px;align-items:center;text-decoration:none;">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--dim);letter-spacing:2px;text-transform:uppercase;">HackTheBox</span>
+      <div>
+        <div style="font-family:'Space Grotesk',Inter,sans-serif;font-size:22px;font-weight:500;color:var(--text);letter-spacing:-0.5px;">app.hackthebox.com/profile</div>
+        <div style="font-family:Inter,sans-serif;font-size:13px;color:var(--muted);margin-top:2px;">Verifizierte Badges und Path</div>
+      </div>
+      <span style="font-family:'JetBrains Mono',monospace;font-size:16px;color:var(--accent);text-align:right;">↗</span>
+    </a>
+  </div>
+</section>
+
+<section style="padding:0 40px 96px;max-width:760px;margin:0 auto;">
+  <div style="padding:24px 28px;background:var(--bg-surface);border:1px solid var(--border);border-radius:4px;display:flex;align-items:center;gap:16px;">
+    <span style="width:8px;height:8px;border-radius:4px;background:var(--ok);box-shadow:0 0 8px rgba(74,222,128,0.53);flex-shrink:0;"></span>
+    <div style="flex:1;">
+      <div style="font-family:Inter,sans-serif;font-size:14px;color:var(--text);font-weight:500;">Open to senior roles in AI Security.</div>
+      <div style="font-family:Inter,sans-serif;font-size:13px;color:var(--muted);margin-top:2px;">Selective consulting engagements considered.</div>
+    </div>
+  </div>
+</section>
+
+{% include footer.html %}
+</body>
+</html>

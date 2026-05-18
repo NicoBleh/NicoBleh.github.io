@@ -1,39 +1,19 @@
-<header
-    class="flex flex-wrap items-center justify-between whitespace-nowrap border-b border-solid border-b-[#1e3a5f] px-4 @[480px]:px-10 py-3 bg-[#0a0f1a] sticky top-0 z-50">
-    {% assign t = site.data.translations[page.lang] %}
-    <div class="flex items-center gap-4">
-        <div class="size-5 text-[#22d3ee]">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2L3 7V12C3 16.55 6.84 20.74 12 22C17.16 20.74 21 16.55 21 12V7L12 2Z" stroke="#22d3ee" stroke-width="1.5" stroke-linejoin="round"/>
-                <path d="M9 12L11 14L15 10" stroke="#22d3ee" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </div>
-        <h2 class="text-[#f1f5f9] text-lg font-bold leading-tight tracking-[-0.015em]">
-            {% if page.lang == 'de' %}
-            <a href="/" class="hover:text-[#22d3ee] transition-colors">
-                {% else %}
-                <a href="/en" class="hover:text-[#22d3ee] transition-colors">
-                    {% endif %}
-                    Nico Bleh</a>
-        </h2>
-    </div>
-    <div class="flex flex-1 justify-end gap-x-5 gap-y-4 flex-wrap-reverse">
-        <div class="flex items-center gap-5">
-            <a class="text-[#94a3b8] text-sm font-medium leading-normal hover:text-[#22d3ee] transition-colors" href="about">{{ t.nav_about }}</a>
-            <a class="text-[#94a3b8] text-sm font-medium leading-normal hover:text-[#22d3ee] transition-colors" href="services">{{ t.nav_services }}</a>
-            <a class="text-[#94a3b8] text-sm font-medium leading-normal hover:text-[#22d3ee] transition-colors" href="portfolio">{{ t.nav_portfolio }}</a>
-        </div>
-        <div class="flex items-center rounded-md border border-[#1e3a5f] bg-[#111827] px-3 py-1">
-            <a href="{% if page.lang == 'de' %}/en/{% else %}/{% endif %}"
-                class="text-[#94a3b8] text-sm font-medium leading-normal hover:text-[#22d3ee] transition-colors">
-                {% if page.lang == 'de' %}EN{% else %}DE{% endif %}
-            </a>
-        </div>
-        <a href="https://forms.gle/x745HeiKKSRCv5tH7" target="_blank" rel="noopener">
-            <button
-                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-[#22d3ee] text-[#0a0f1a] text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[#06b6d4] transition-colors">
-                <span class="truncate">Get in Touch</span>
-            </button>
-        </a>
-    </div>
+{% assign t = site.data.translations[page.lang] %}
+<header style="display:flex;align-items:center;justify-content:space-between;padding:18px 40px;background:var(--bg);position:sticky;top:0;z-index:50;border-bottom:1px solid var(--border);">
+  <a href="{{ page.lang == 'en' ? '/en/' : '/' }}" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+    <div style="width:28px;height:28px;border-radius:4px;background:var(--accent);display:grid;place-items:center;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:700;color:var(--bg);flex-shrink:0;">nb</div>
+    <span style="color:var(--text);font-family:'Space Grotesk',Inter,sans-serif;font-size:16px;font-weight:600;letter-spacing:-0.3px;">Nico Bleh</span>
+    <span style="color:var(--dim);font-family:'JetBrains Mono',monospace;font-size:12px;margin-left:4px;">// ai security</span>
+  </a>
+  <nav style="display:flex;align-items:center;gap:28px;">
+    <a href="{{ page.lang == 'en' ? '/en/about' : '/about' }}" style="color:var(--muted);font-family:Inter,sans-serif;font-size:14px;font-weight:500;text-decoration:none;">{{ t.nav_about }}</a>
+    <a href="{{ page.lang == 'en' ? '/en/portfolio' : '/portfolio' }}" style="color:var(--muted);font-family:Inter,sans-serif;font-size:14px;font-weight:500;text-decoration:none;">{{ t.nav_portfolio }}</a>
+    <a href="{{ page.lang == 'en' ? '/en/blog' : '/blog' }}" style="color:var(--muted);font-family:Inter,sans-serif;font-size:14px;font-weight:500;text-decoration:none;">{{ t.nav_blog }}</a>
+    <a href="{{ page.lang == 'en' ? '/en/contact' : '/contact' }}" style="color:var(--muted);font-family:Inter,sans-serif;font-size:14px;font-weight:500;text-decoration:none;">{{ t.nav_contact }}</a>
+    <span style="color:var(--dim);font-family:'JetBrains Mono',monospace;font-size:12px;">
+      {% if page.lang == 'en' %}<a href="/" style="color:var(--muted);text-decoration:none;">DE</a> / <span style="color:var(--text);">EN</span>
+      {% else %}<span style="color:var(--text);">DE</span> / <a href="/en/" style="color:var(--muted);text-decoration:none;">EN</a>
+      {% endif %}
+    </span>
+  </nav>
 </header>

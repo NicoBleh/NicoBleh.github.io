@@ -1,87 +1,39 @@
 {% assign t = site.data.translations[page.lang] %}
-<footer class="flex justify-center border-t border-[#1e3a5f] bg-[#0a0f1a]">
-    <div class="flex max-w-[960px] flex-1 flex-col">
-        <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
-            <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
-                  <a href="privacy" class="text-[#94a3b8] text-base font-normal leading-normal min-w-40 hover:text-[#22d3ee] transition-colors">{{ t.nav_privacy }}</a>
-                  <a href="imprint" class="text-[#94a3b8] text-base font-normal leading-normal min-w-40 hover:text-[#22d3ee] transition-colors">{{ t.nav_impressum }}</a>
-            </div>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="https://www.linkedin.com/in/nico-bleh/" class="text-[#94a3b8] hover:text-[#22d3ee] transition-colors">
-                    <div data-icon="LinkedinLogo" data-size="24px" data-weight="regular">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor"
-                            viewBox="0 0 256 256">
-                            <path
-                                d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z">
-                            </path>
-                        </svg>
-                    </div>
-                </a>
-            </div>
-            <p class="text-[#64748b] text-sm font-normal leading-normal">{{ t.footer_copyright }}</p>
-        </footer>
+<footer style="border-top:1px solid var(--border);padding:48px 40px 32px;background:var(--bg);">
+  <div style="display:grid;grid-template-columns:1.2fr 2fr 1fr;gap:48px;align-items:start;max-width:1100px;margin:0 auto;">
+    <!-- Brand + statement -->
+    <div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;">
+        <div style="width:24px;height:24px;border-radius:3px;background:var(--accent);display:grid;place-items:center;font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700;color:var(--bg);">nb</div>
+        <span style="color:var(--text);font-family:'Space Grotesk',Inter,sans-serif;font-size:14px;font-weight:600;">Nico Bleh</span>
+      </div>
+      <p style="font-family:Inter,sans-serif;font-size:13px;color:var(--muted);line-height:1.6;margin:0;max-width:280px;">
+        {{ t.footer_statement }}
+      </p>
     </div>
+    <!-- Links -->
+    <div style="display:flex;gap:56px;">
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--dim);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;">Profile</div>
+        <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;">
+          <li><a href="https://linkedin.com/in/nicobleh" target="_blank" style="color:var(--text-dim);font-family:Inter,sans-serif;font-size:13px;text-decoration:none;display:inline-flex;gap:6px;align-items:center;">LinkedIn <span style="color:var(--dim);font-size:11px;">↗</span></a></li>
+          <li><a href="https://github.com/nicobleh" target="_blank" style="color:var(--text-dim);font-family:Inter,sans-serif;font-size:13px;text-decoration:none;display:inline-flex;gap:6px;align-items:center;">GitHub <span style="color:var(--dim);font-size:11px;">↗</span></a></li>
+          <li><a href="https://app.hackthebox.com/profile/nicobleh" target="_blank" style="color:var(--text-dim);font-family:Inter,sans-serif;font-size:13px;text-decoration:none;display:inline-flex;gap:6px;align-items:center;">HackTheBox <span style="color:var(--dim);font-size:11px;">↗</span></a></li>
+          <li><a href="mailto:nicobleh@gmail.com" style="color:var(--text-dim);font-family:Inter,sans-serif;font-size:13px;text-decoration:none;display:inline-flex;gap:6px;align-items:center;">nicobleh@gmail.com <span style="color:var(--dim);font-size:11px;">✉</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--dim);letter-spacing:2px;text-transform:uppercase;margin-bottom:14px;">Rechtliches</div>
+        <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;">
+          <li><a href="{{ page.lang == 'en' ? '/en/imprint' : '/imprint' }}" style="color:var(--text-dim);font-family:Inter,sans-serif;font-size:13px;text-decoration:none;">{{ t.nav_impressum }}</a></li>
+          <li><a href="{{ page.lang == 'en' ? '/en/privacy' : '/privacy' }}" style="color:var(--text-dim);font-family:Inter,sans-serif;font-size:13px;text-decoration:none;">{{ t.nav_privacy }}</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- Copyright -->
+    <div style="text-align:right;display:flex;flex-direction:column;gap:8px;align-items:flex-end;">
+      <span style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--dim);letter-spacing:1px;">{{ t.footer_copyright }}</span>
+    </div>
+  </div>
+  {% include klaro.html ignore_missing=true %}
 </footer>
-
-<!-- Klaro Cookie Banner -->
-<link
-  rel="stylesheet"
-  href="/styles/klaro.min.css"
-/>
-<script>
-  window.klaroConfig = {
-    translations: {
-      de: {
-        privacyPolicyUrl: '/privacy',
-        consentModal: {
-          title: 'Dienste-Einstellungen',
-          description: 'Welche Dienste möchten Sie zulassen?'
-        },
-        purposes: {
-          analytics: 'Analytics'
-        },
-        ok: 'Alle akzeptieren',
-        cancel: 'Nur essenzielle Dienste akzeptieren'
-      },
-      en: {
-        privacyPolicyUrl: '/en/privacy',
-        consentModal: {
-          title: 'Service Settings',
-          description: 'Which services would you like to allow?'
-        },
-        purposes: {
-          analytics: 'Analytics'
-        },
-        ok: 'Accept all',
-        cancel: 'Accept essential cookies'
-      }
-    },
-    storageMethod: 'cookie',
-    cookieName: 'klaro',
-    elementID: 'klaro',
-    acceptAll: true,
-    services: [
-      {
-        name: 'posthog',
-        purposes: ['analytics'],
-        default: false,
-        optOut: true,
-        translations: {
-          de: {
-            title: 'Web-Analyse',
-            description: 'Sammelt anonymisierte Nutzungsdaten, um die Website zu verbessern.'
-          },
-          en: {
-            title: 'Web Analytics',
-            description: 'Collects anonymized usage data to improve the site.'
-          }
-        }
-      }
-    ]
-  };
-</script>
-<script
-  defer
-  data-config="klaroConfig"
-  src="/scripts/klaro.js"
-></script>
