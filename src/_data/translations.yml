@@ -205,7 +205,7 @@ en:
   about_p3: "What I bring: 13+ years of engineering, around 9 of them in leadership roles at CTO and Head of level, consistently in regulated environments (BaFin FinTech, BASF Enterprise, pharma audit), plus a deliberate specialization in offensive web security (HTB CWES, April 2026) and AI red teaming (HTB AI Red Teamer Path, ongoing)."
   about_diff1: "I have shipped LLM features to production (Opteinics Scope-3 Smart Suggestions, Textbroker GenAI platform) and know their vulnerabilities from both sides."
   about_diff2: "At Creditshelf I led engineering through an IPO including EY audit, and shipped fraud detection with graph DB and ML to production. Auditable, regulatorily deployable AI is not a theoretical concept for me."
-  about_diff3: "HTB CWES (Certified Web Exploitation Specialist) is my proof that I don't just build the web layer — I break it. Exactly the layer where most LLM pre- and post-filters get attacked."
+  about_diff3: "HTB CWES (Certified Web Exploitation Specialist) is my proof that I don't just build the web layer but also break it. Exactly the layer where most LLM pre- and post-filters get attacked."
   about_current1: "HTB AI Red Teamer Path (ongoing, 2026)"
   about_current2: "Ongoing LinkedIn content series on Agentic AI Security, Indirect Prompt Injection, Multi-Agent Authorization, and AI Zero-Days"
   about_current3: "Personal projects in progress: IOC-Extractor, phishing classifier, adversarial ML reproductions"

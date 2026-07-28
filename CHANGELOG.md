@@ -66,6 +66,15 @@ Deutscher und englischer Sprachblock wurden auf denselben Stand gebracht. Die un
   (kein `_posts`-Verzeichnis, keine Collection). "Lesen"-Link und Lesezeit-Angabe wurden aus
   allen drei Teasern entfernt, die Karten bleiben als reine Textblöcke
   (`src/index.html`, `src/en/index.html`).
+- **K6** Gedankenstriche im Bestandstext auf `·` umgestellt: zwölf Seitentitel
+  (`Portfolio — Nico Bleh` zu `Portfolio · Nico Bleh`, alle Seiten in DE und EN) und sechs
+  Portfolio-Überschriften (`Opteinics — produktive LLM-Features` zu
+  `Opteinics · produktive LLM-Features`). In `about_diff3` (EN) stand der Strich mitten im Satz
+  und wurde nicht durch einen Trenner ersetzt, sondern nach dem Vorbild der deutschen Fassung
+  aufgelöst: `don't just build the web layer but also break it`. Dazu zwei Kommentare in
+  `src/styles/input.css`, deren erster noch die alte Dachmarke nannte.
+  Die Bis-Striche in den Datumsbereichen der Stationen (`05/2024 – 07/2025`) und in
+  `2025–2026` bleiben unverändert, da sie keine Gedankenstriche sind.
 - **K5** CV-Download komplett entfernt. Die verlinkte `cv/CV_Nico_Bleh.pdf` existierte im Repo
   gar nicht, beide Buttons liefen auf 404. Statt des Downloads verweisen Hero-CTA und der Block
   am Ende von `/about` jetzt auf `/contact`; der CV wird auf Anfrage verschickt. Betroffen:
