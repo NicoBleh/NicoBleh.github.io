@@ -8,12 +8,12 @@ de:
   nav_impressum: "Impressum"
 
   # Hero
-  hero_eyebrow: "Senior · Frankfurt/Mainz · offen für Senior-Rollen"
-  hero_hook_bold: "AI Security ist kein Bolt-On."
-  hero_hook_rest: "Sie ist das Architektur-Prinzip, das darüber entscheidet, ob ein LLM-Agent in Produktion gehen kann."
-  hero_subtitle: "LLM Hardening · AI Red Teaming · Threat Modeling for Agentic AI"
-  hero_pitch: "Ich härte produktive LLM- und Agentic-AI-Systeme: Threat Modeling für AI-Architekturen, Prompt-Injection-Defense, Secure RAG, Knowledge-Graph-Provenance, IAM für Agenten und nachvollziehbares Audit-Logging. 12+ Jahre Engineering-Leadership, davon 9+ Jahre auf C-Level in regulierten Umfeldern (BaFin-FinTech, BASF-Enterprise, Pharma-Audit)."
-  hero_cta_primary: "CV herunterladen"
+  hero_eyebrow: "Ex-CTO · Frankfurt/Mainz · offen für Lead-, Architektur- und Director-Rollen"
+  hero_hook_bold: "Ob ein LLM-Agent in Produktion gehen darf, entscheidet die Architektur."
+  hero_hook_rest: "Nicht der Modell-Benchmark."
+  hero_subtitle: "Architektur · Delivery · Härtung von LLM- und Agentic-AI-Systemen"
+  hero_pitch: "Ich bringe LLM- und Agentic-AI-Systeme in Produktion und halte sie dort betriebsfähig: Architektur und Delivery vom Use Case bis zum Rollout, Knowledge-Graph-Backbones mit Provenance und Audit-Trail, MLOps-Ketten, dazu Threat Modeling, Prompt-Injection-Defense, Secure RAG und IAM für Agenten. 13+ Jahre Engineering, davon rund 9 in Führungsverantwortung auf CTO- und Head-of-Ebene in regulierten Umfeldern: BaFin-FinTech, BASF-Enterprise, Pharma-Audit."
+  hero_cta_primary: "Kontakt aufnehmen"
   hero_cta_secondary: "LinkedIn-Profil"
 
   # Proof strip
@@ -47,7 +47,7 @@ de:
   post2_tag: "Agentic AI"
 
   # Post 3
-  post3_title: "MDASH schlägt Mythos: Architektur statt Modell"
+  post3_title: "Architektur schlägt Modell"
   post3_date: "21. Apr 2026"
   post3_readtime: "5 min"
   post3_lead: "Warum die nächste Generation produktionsreifer LLM-Apps in der Architektur entschieden wird, nicht im Modell-Benchmark."
@@ -75,9 +75,9 @@ de:
   post6_tag: "AI Red Teaming"
 
   # About
-  about_lead: "AI Security ist kein Bolt-On. Sie ist das Architektur-Prinzip, das darüber entscheidet, ob ein LLM-Agent in Produktion gehen kann."
-  about_p2: "Ich härte produktive LLM- und Agentic-AI-Systeme: Threat Modeling für AI-Architekturen, Prompt-Injection-Defense, Secure RAG, Knowledge-Graph-Provenance, IAM für Agenten und nachvollziehbares Audit-Logging."
-  about_p3: "Was ich mitbringe: 12+ Jahre Engineering-Leadership, davon 9+ Jahre auf C-Level / Head-of-Ebene, in regulierten Umfeldern (BaFin-FinTech, BASF-Enterprise, Pharma-Audit) plus eine bewusste Spezialisierung auf offensive Web Security (HTB CWES, April 2026) und AI Red Teaming (HTB AI Red Teamer Path, laufend)."
+  about_lead: "Ob ein LLM-Agent in Produktion gehen darf, entscheidet die Architektur. Nicht der Modell-Benchmark."
+  about_p2: "Ich bringe LLM- und Agentic-AI-Systeme in Produktion und halte sie dort betriebsfähig: Architektur und Delivery vom Use Case bis zum Rollout, Knowledge-Graph-Backbones mit Provenance und Audit-Trail, MLOps-Ketten, dazu Threat Modeling, Prompt-Injection-Defense, Secure RAG und IAM für Agenten."
+  about_p3: "Was ich mitbringe: 13+ Jahre Engineering, davon rund 9 in Führungsverantwortung auf CTO- und Head-of-Ebene, durchgehend in regulierten Umfeldern (BaFin-FinTech, BASF-Enterprise, Pharma-Audit), dazu eine bewusste Spezialisierung auf offensive Web Security (HTB CWES, April 2026) und AI Red Teaming (HTB AI Red Teamer Path, laufend)."
   about_diff1: "Ich habe LLM-Features in Produktion gebracht (Opteinics Scope-3-Smart-Suggestions, Textbroker GenAI-Plattform) und kenne ihre Verwundbarkeiten von beiden Seiten."
   about_diff2: "Bei Creditshelf habe ich Engineering durch einen IPO inkl. EY-Audit geführt und Fraud Detection mit Graph-DB und ML produktiv ausgerollt. Auditierbare, reguliert deploybare AI ist für mich kein theoretisches Konzept."
   about_diff3: "HTB CWES (Certified Web Exploitation Specialist) ist mein Beleg, dass ich die Web-Schicht nicht nur baue, sondern auch breche. Genau die Schicht, an der die meisten LLM-Pre- und Post-Filter angegriffen werden."
@@ -85,13 +85,15 @@ de:
   about_current2: "Laufende LinkedIn-Content-Serie zu Agentic AI Security, Indirect Prompt Injection, Multi-Agent Authorization und AI-Zero-Days"
   about_current3: "Eigene Projekte in Arbeit: IOC-Extractor, Phishing-Klassifikator, Adversarial-ML-Reproduktionen"
   about_ready_label: "Bereit für:"
-  about_ready_text: "Senior AI Security Engineer, AI Red Team Engineer, ML Security Engineer, LLM Security Engineer. DACH, Remote bevorzugt."
+  about_ready_text: "AI Solution Architect, Lead / Director AI Engineering, Applied AI Lead, Senior Manager AI Security. DACH, hybrid oder remote."
   about_cv_title: "Stationen"
-  cv_download_title: "CV als PDF herunterladen"
-  cv_download_sub: "2 Seiten · DE/EN · aktualisiert Mai 2026"
+  cv_request_title: "CV auf Anfrage"
+  cv_request_sub: "Kurz melden, dann schicke ich den vollständigen Lebenslauf zu."
+  cv_request_cta: "Kontakt"
 
-  # Footer
-  footer_statement: "Open to senior roles in AI Security. Selective consulting engagements considered."
+  # Verfügbarkeit (Footer und Kontaktseite)
+  availability_statement: "Offen für Lead-, Architektur- und Director-Rollen im AI-Engineering."
+  availability_sub: "DACH, hybrid oder remote."
   footer_copyright: "© 2026 Nico Bleh"
 
   # Privacy / Imprint (keep minimal)
@@ -137,12 +139,12 @@ en:
   nav_impressum: "Imprint"
 
   # Hero
-  hero_eyebrow: "Senior · Frankfurt/Mainz · open to senior roles"
-  hero_hook_bold: "AI Security is not a bolt-on."
-  hero_hook_rest: "It is the architectural principle that determines whether an LLM agent can go to production."
-  hero_subtitle: "LLM Hardening · AI Red Teaming · Threat Modeling for Agentic AI"
-  hero_pitch: "I harden production LLM and agentic AI systems: threat modeling for AI architectures, prompt injection defense, secure RAG, knowledge graph provenance, agent IAM, and auditable logging. 12+ years of engineering leadership, 9+ years at C-level in regulated environments (BaFin FinTech, BASF Enterprise, pharma audit)."
-  hero_cta_primary: "Download CV"
+  hero_eyebrow: "Ex-CTO · Frankfurt/Mainz · open to lead, architecture and director roles"
+  hero_hook_bold: "Whether an LLM agent is allowed to go to production is decided by the architecture."
+  hero_hook_rest: "Not by the model benchmark."
+  hero_subtitle: "Architecture · Delivery · Hardening of LLM and Agentic AI systems"
+  hero_pitch: "I take LLM and agentic AI systems into production and keep them operable there: architecture and delivery from use case to rollout, knowledge graph backbones with provenance and audit trail, MLOps pipelines, plus threat modeling, prompt injection defense, secure RAG, and agent IAM. 13+ years of engineering, around 9 of them in leadership roles at CTO and Head of level in regulated environments: BaFin FinTech, BASF Enterprise, pharma audit."
+  hero_cta_primary: "Get in touch"
   hero_cta_secondary: "LinkedIn Profile"
 
   # Proof strip
@@ -173,7 +175,7 @@ en:
   post2_lead: "Which permission applies when Agent A acts on behalf of User B to talk to Agent C requesting data for User D? A spec that still needs to be written."
   post2_tag: "Agentic AI"
 
-  post3_title: "MDASH beats Myth: Architecture over Model"
+  post3_title: "Architecture over Model"
   post3_date: "21 Apr 2026"
   post3_readtime: "5 min"
   post3_lead: "Why the next generation of production-ready LLM apps will be decided in architecture, not model benchmarks."
@@ -198,23 +200,25 @@ en:
   post6_tag: "AI Red Teaming"
 
   # About
-  about_lead: "AI Security is not a bolt-on. It is the architectural principle that determines whether an LLM agent can go to production."
-  about_p2: "I harden production LLM and agentic AI systems: threat modeling for AI architectures, prompt injection defense, secure RAG, knowledge graph provenance, agent IAM, and auditable logging."
-  about_p3: "What I bring: 12+ years of engineering leadership, 9+ at C-level in regulated environments (BaFin FinTech, BASF Enterprise, pharma audit), plus a deliberate specialization in offensive web security (HTB CWES, April 2026) and AI red teaming (HTB AI Red Teamer Path, ongoing)."
+  about_lead: "Whether an LLM agent is allowed to go to production is decided by the architecture. Not by the model benchmark."
+  about_p2: "I take LLM and agentic AI systems into production and keep them operable there: architecture and delivery from use case to rollout, knowledge graph backbones with provenance and audit trail, MLOps pipelines, plus threat modeling, prompt injection defense, secure RAG, and agent IAM."
+  about_p3: "What I bring: 13+ years of engineering, around 9 of them in leadership roles at CTO and Head of level, consistently in regulated environments (BaFin FinTech, BASF Enterprise, pharma audit), plus a deliberate specialization in offensive web security (HTB CWES, April 2026) and AI red teaming (HTB AI Red Teamer Path, ongoing)."
   about_diff1: "I have shipped LLM features to production (Opteinics Scope-3 Smart Suggestions, Textbroker GenAI platform) and know their vulnerabilities from both sides."
   about_diff2: "At Creditshelf I led engineering through an IPO including EY audit, and shipped fraud detection with graph DB and ML to production. Auditable, regulatorily deployable AI is not a theoretical concept for me."
-  about_diff3: "HTB CWES (Certified Web Exploitation Specialist) is my proof that I don't just build the web layer — I break it. Exactly the layer where most LLM pre- and post-filters get attacked."
+  about_diff3: "HTB CWES (Certified Web Exploitation Specialist) is my proof that I don't just build the web layer but also break it. Exactly the layer where most LLM pre- and post-filters get attacked."
   about_current1: "HTB AI Red Teamer Path (ongoing, 2026)"
   about_current2: "Ongoing LinkedIn content series on Agentic AI Security, Indirect Prompt Injection, Multi-Agent Authorization, and AI Zero-Days"
   about_current3: "Personal projects in progress: IOC-Extractor, phishing classifier, adversarial ML reproductions"
   about_ready_label: "Open to:"
-  about_ready_text: "Senior AI Security Engineer, AI Red Team Engineer, ML Security Engineer, LLM Security Engineer. DACH, remote preferred."
+  about_ready_text: "AI Solution Architect, Lead / Director AI Engineering, Applied AI Lead, Senior Manager AI Security. DACH, hybrid or remote."
   about_cv_title: "Career"
-  cv_download_title: "Download CV as PDF"
-  cv_download_sub: "2 pages · DE/EN · updated May 2026"
+  cv_request_title: "CV on request"
+  cv_request_sub: "Drop me a line and I'll send over the full CV."
+  cv_request_cta: "Contact"
 
-  # Footer
-  footer_statement: "Open to senior roles in AI Security. Selective consulting engagements considered."
+  # Availability (footer and contact page)
+  availability_statement: "Open to lead, architecture and director roles in AI engineering."
+  availability_sub: "DACH, hybrid or remote."
   footer_copyright: "© 2026 Nico Bleh"
 
   # Privacy / Imprint
